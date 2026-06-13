@@ -415,28 +415,23 @@
   <section class="block" data-step="5">
     <div class="block-head">
       <div class="block-eyebrow" data-i18n="b5_eyebrow">¡Gracias!</div>
-      <div class="block-title" data-i18n="b5_title">Has completado el cuestionario principal</div>
+      <div class="block-title" data-i18n="b5_title">Has completado el primer bloque</div>
       <div class="block-desc" data-i18n="b5_desc">
-        Tus respuestas ya tienen valor para el estudio. Si quieres, puedes continuar con bloques adicionales opcionales
+        Tus respuestas ya tienen valor para el estudio. Quedan dos bloques más, de unos 5 minutos cada uno,
         sobre el contexto de tu centro y, si haces investigación, sobre el uso de IA en tu trabajo académico.
-        Cada bloque adicional son unos 5 minutos.
       </div>
     </div>
 
-    <div class="optional-notice" data-i18n="b5_notice">
-      Estos bloques son completamente opcionales. Puedes finalizar ahora pulsando "Enviar y finalizar".
-    </div>
-
     <div class="nav-row">
-      <button class="btn btn-primary" id="submitNowBtn" data-i18n="submit_now">Enviar y finalizar →</button>
-      <button class="btn btn-ghost" id="continueOptionalBtn" data-i18n="continue_optional">Continuar con bloques opcionales →</button>
+      <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
+      <button class="btn btn-primary" data-next data-i18n="continue">Continuar →</button>
     </div>
   </section>
 
   <!-- STEP 6: C2 - INSTITUTIONAL CLIMATE -->
   <section class="block" data-step="6">
     <div class="block-head">
-      <div class="block-eyebrow" data-i18n="b6_eyebrow">Bloque 2 de 3 · Opcional</div>
+      <div class="block-eyebrow" data-i18n="b6_eyebrow">Bloque 2 de 3</div>
       <div class="block-title" data-i18n="b6_title">El clima de tu centro</div>
       <div class="block-desc" data-i18n="b6_desc">Sobre cómo se está gestionando la IA en tu centro educativo.</div>
     </div>
@@ -468,7 +463,7 @@
   <!-- STEP 7: C2 - FAMILIES & STUDENTS -->
   <section class="block" data-step="7">
     <div class="block-head">
-      <div class="block-eyebrow" data-i18n="b7_eyebrow">Bloque 2 de 3 · Opcional</div>
+      <div class="block-eyebrow" data-i18n="b7_eyebrow">Bloque 2 de 3</div>
       <div class="block-title" data-i18n="b7_title">Familias y estudiantes</div>
       <div class="block-desc" data-i18n="b7_desc">Sobre si se ha consultado a la comunidad educativa.</div>
     </div>
@@ -492,7 +487,7 @@
   <!-- STEP 8: C2 - STAFFING & RESULTS -->
   <section class="block" data-step="8">
     <div class="block-head">
-      <div class="block-eyebrow" data-i18n="b8_eyebrow">Bloque 2 de 3 · Opcional</div>
+      <div class="block-eyebrow" data-i18n="b8_eyebrow">Bloque 2 de 3</div>
       <div class="block-title" data-i18n="b8_title">Contratación y resultados</div>
       <div class="block-desc" data-i18n="b8_desc">Sobre tu propio centro y sobre tu percepción del sistema educativo en general.</div>
     </div>
@@ -507,20 +502,16 @@
 
     <div id="slidersC2b"></div>
 
-    <div class="optional-notice" data-i18n="b8_notice">
-      Si haces investigación, el siguiente bloque pregunta sobre el uso de IA en tu trabajo académico. Si no, puedes finalizar aquí.
-    </div>
-
     <div class="nav-row">
-      <button class="btn btn-primary" id="submitAfterC2Btn" data-i18n="submit_now">Enviar y finalizar →</button>
-      <button class="btn btn-ghost" data-next data-i18n="continue_research">Continuar con investigación →</button>
+      <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
+      <button class="btn btn-primary" data-next data-i18n="continue">Continuar →</button>
     </div>
   </section>
 
   <!-- STEP 9: C3 - RESEARCH FILTER -->
   <section class="block" data-step="9">
     <div class="block-head">
-      <div class="block-eyebrow" data-i18n="b9_eyebrow">Bloque 3 de 3 · Opcional</div>
+      <div class="block-eyebrow" data-i18n="b9_eyebrow">Bloque 3 de 3</div>
       <div class="block-title" data-i18n="b9_title">El docente-investigador ante la IA</div>
       <div class="block-desc" data-i18n="b9_desc">Solo para quienes realizan actividad investigadora o de escritura académica.</div>
     </div>
@@ -542,7 +533,7 @@
   <!-- STEP 10: C3 - TASK CONCERNS -->
   <section class="block" data-step="10">
     <div class="block-head">
-      <div class="block-eyebrow" data-i18n="b10_eyebrow">Bloque 3 de 3 · Opcional</div>
+      <div class="block-eyebrow" data-i18n="b10_eyebrow">Bloque 3 de 3</div>
       <div class="block-title" data-i18n="b10_title">Tareas de investigación y uso de IA</div>
       <div class="block-desc" data-i18n="b10_desc">
         Para cada tarea, imagina que estás trabajando en una investigación para una revista indexada Q1.
@@ -569,7 +560,7 @@
   <!-- STEP 11: C3 - EDITORIAL POLICIES -->
   <section class="block" data-step="11">
     <div class="block-head">
-      <div class="block-eyebrow" data-i18n="b11_eyebrow">Bloque 3 de 3 · Opcional</div>
+      <div class="block-eyebrow" data-i18n="b11_eyebrow">Bloque 3 de 3</div>
       <div class="block-title" data-i18n="b11_title">Políticas editoriales y transparencia</div>
       <div class="block-desc" data-i18n="b11_desc">Las últimas preguntas. Gracias por tu tiempo.</div>
     </div>
@@ -1844,33 +1835,33 @@ const I18N = {
     sum_c3:"Cuestionario 3: investigación y IA",
     sum_c3_concern:"Preocupación media en tareas de investigación",
     sum_c3_count:"Marcaste preocupación en {n} de 13 tareas.",
-    b5_eyebrow:"¡Gracias!", b5_title:"Has completado el cuestionario principal",
-    b5_desc:"Tus respuestas ya tienen valor para el estudio. Si quieres, puedes continuar con bloques adicionales opcionales sobre el contexto de tu centro y, si haces investigación, sobre el uso de IA en tu trabajo académico. Cada bloque adicional son unos 5 minutos.",
+    b5_eyebrow:"¡Bien hecho!", b5_title:"Has completado el primer bloque",
+    b5_desc:"Tus respuestas ya tienen valor para el estudio. Quedan dos bloques más, de unos 5 minutos cada uno, sobre el contexto de tu centro y, si haces investigación, sobre el uso de IA en tu trabajo académico.",
     b5_notice:'Estos bloques son completamente opcionales. Puedes finalizar ahora pulsando "Enviar y finalizar".',
-    submit_now:"Enviar y finalizar →", continue_optional:"Continuar con bloques opcionales →",
+    submit_now:"Enviar y finalizar →", continue_optional:"Continuar →",
     thanks_title:"¡Gracias por tu participación!",
     thanks_p1:"Tus respuestas se han registrado de forma anónima. Aquí tienes un resumen visual de tus respuestas sobre las situaciones planteadas. Este resumen es solo para ti, no se almacena.",
     thanks_p2:"Si tienes preguntas sobre el estudio, escribe a cristina.prego@urjc.es",
     progress:"Paso", of:"de",
     step_names:["Bienvenida","Quién eres","Situaciones reales","Conocimiento y bienestar","Formación","Bloques opcionales","Clima del centro","Familias y estudiantes","Contratación y resultados","Filtro investigación","Tareas e IA","Políticas editoriales","Gracias"],
-    b6_eyebrow:"Bloque 2 de 3 · Opcional", b6_title:"El clima de tu centro", b6_desc:"Sobre cómo se está gestionando la IA en tu centro educativo.",
+    b6_eyebrow:"Bloque 2 de 3", b6_title:"El clima de tu centro", b6_desc:"Sobre cómo se está gestionando la IA en tu centro educativo.",
     sort2_title:"¿De dónde viene el impulso hacia la IA en tu centro?",
     sort2_instr:"Si tu centro ha recibido directrices para integrar la IA, arrastra cada posible origen a la zona que refleje cuánto ha influido.",
-    b7_eyebrow:"Bloque 2 de 3 · Opcional", b7_title:"Familias y estudiantes", b7_desc:"Sobre si se ha consultado a la comunidad educativa.",
-    b8_eyebrow:"Bloque 2 de 3 · Opcional", b8_title:"Contratación y resultados", b8_desc:"Sobre tu propio centro y sobre tu percepción del sistema educativo en general.",
+    b7_eyebrow:"Bloque 2 de 3", b7_title:"Familias y estudiantes", b7_desc:"Sobre si se ha consultado a la comunidad educativa.",
+    b8_eyebrow:"Bloque 2 de 3", b8_title:"Contratación y resultados", b8_desc:"Sobre tu propio centro y sobre tu percepción del sistema educativo en general.",
     b8_notice:"Si haces investigación, el siguiente bloque pregunta sobre el uso de IA en tu trabajo académico. Si no, puedes finalizar aquí.",
     continue_research:"Continuar con investigación →",
-    b9_eyebrow:"Bloque 3 de 3 · Opcional", b9_title:"El docente-investigador ante la IA", b9_desc:"Solo para quienes realizan actividad investigadora o de escritura académica.",
+    b9_eyebrow:"Bloque 3 de 3", b9_title:"El docente-investigador ante la IA", b9_desc:"Solo para quienes realizan actividad investigadora o de escritura académica.",
     inv1_label:"¿Realizas actualmente actividad investigadora o de escritura académica (artículos, comunicaciones, tesis)?",
     yes:"Sí", no:"No",
-    b10_eyebrow:"Bloque 3 de 3 · Opcional", b10_title:"Tareas de investigación y uso de IA",
+    b10_eyebrow:"Bloque 3 de 3", b10_title:"Tareas de investigación y uso de IA",
     b10_desc:"Para cada tarea, imagina que estás trabajando en una investigación para una revista indexada Q1. Indica si usar IA en esa tarea te genera preocupación. Si dices que sí, indica el motivo y la intensidad.",
     anchorP0:"Ninguna", anchorP1:"Poca", anchorP2:"Moderada", anchorP3:"Bastante", anchorP4:"Máxima",
     concern_q:"¿Te genera preocupación usar IA para esta tarea?",
     reasons_label:"Motivos (puedes marcar varios):",
     other_reason_label:"Otro motivo (opcional)",
     other_reason_ph:"Escribe aquí si quieres especificar otro motivo...",
-    b11_eyebrow:"Bloque 3 de 3 · Opcional", b11_title:"Políticas editoriales y transparencia", b11_desc:"Las últimas preguntas. Gracias por tu tiempo.",
+    b11_eyebrow:"Bloque 3 de 3", b11_title:"Políticas editoriales y transparencia", b11_desc:"Las últimas preguntas. Gracias por tu tiempo.",
   },
   en: {
     welcome_title:"Welcome to Teacher AID",
@@ -1916,33 +1907,33 @@ const I18N = {
     sum_c3:"Questionnaire 3: research and AI",
     sum_c3_concern:"Average concern across research tasks",
     sum_c3_count:"You flagged concern in {n} of 13 tasks.",
-    b5_eyebrow:"Thank you!", b5_title:"You have completed the main questionnaire",
-    b5_desc:"Your answers already have value for the study. If you'd like, you can continue with optional blocks about your school's context and, if you do research, about using AI in academic work. Each extra block takes about 5 minutes.",
+    b5_eyebrow:"Well done!", b5_title:"You've completed the first block",
+    b5_desc:"Your answers already have value for the study. There are two more blocks left, about 5 minutes each, on your school's context and, if you do research, on using AI in academic work.",
     b5_notice:'These blocks are entirely optional. You can finish now by clicking "Submit and finish".',
-    submit_now:"Submit and finish →", continue_optional:"Continue with optional blocks →",
+    submit_now:"Submit and finish →", continue_optional:"Continue →",
     thanks_title:"Thank you for participating!",
     thanks_p1:"Your answers have been recorded anonymously. Here is a visual summary of your answers to the situations presented. This summary is only for you, it is not stored.",
     thanks_p2:"If you have questions about the study, write to cristina.prego@urjc.es",
     progress:"Step", of:"of",
     step_names:["Welcome","Who you are","Real situations","Knowledge and wellbeing","Training","Optional blocks","School climate","Families and students","Staffing and outcomes","Research filter","Tasks and AI","Editorial policies","Thank you"],
-    b6_eyebrow:"Block 2 of 3 · Optional", b6_title:"Your school's climate", b6_desc:"About how AI is being managed at your school.",
+    b6_eyebrow:"Block 2 of 3", b6_title:"Your school's climate", b6_desc:"About how AI is being managed at your school.",
     sort2_title:"Where does the push toward AI in your school come from?",
     sort2_instr:"If your school has received directives to integrate AI, drag each possible source to the zone reflecting how much influence it has had.",
-    b7_eyebrow:"Block 2 of 3 · Optional", b7_title:"Families and students", b7_desc:"About whether the school community has been consulted.",
-    b8_eyebrow:"Block 2 of 3 · Optional", b8_title:"Staffing and outcomes", b8_desc:"About your own school and your perception of the education system in general.",
+    b7_eyebrow:"Block 2 of 3", b7_title:"Families and students", b7_desc:"About whether the school community has been consulted.",
+    b8_eyebrow:"Block 2 of 3", b8_title:"Staffing and outcomes", b8_desc:"About your own school and your perception of the education system in general.",
     b8_notice:"If you do research, the next block asks about using AI in academic work. If not, you can finish here.",
     continue_research:"Continue with research block →",
-    b9_eyebrow:"Block 3 of 3 · Optional", b9_title:"The teacher-researcher and AI", b9_desc:"Only for those who currently do research or academic writing.",
+    b9_eyebrow:"Block 3 of 3", b9_title:"The teacher-researcher and AI", b9_desc:"Only for those who currently do research or academic writing.",
     inv1_label:"Do you currently engage in academic research or writing (e.g. articles, conference papers, thesis)?",
     yes:"Yes", no:"No",
-    b10_eyebrow:"Block 3 of 3 · Optional", b10_title:"Research tasks and AI use",
+    b10_eyebrow:"Block 3 of 3", b10_title:"Research tasks and AI use",
     b10_desc:"For each task, imagine you are working on research for a Q1-indexed journal. Indicate whether using AI for that task raises concern. If yes, indicate the reason and intensity.",
     anchorP0:"None", anchorP1:"A little", anchorP2:"Moderate", anchorP3:"A lot", anchorP4:"Maximum",
     concern_q:"Does using AI for this task raise concern for you?",
     reasons_label:"Reasons (select all that apply):",
     other_reason_label:"Other reason (optional)",
     other_reason_ph:"Write here if you want to specify another reason...",
-    b11_eyebrow:"Block 3 of 3 · Optional", b11_title:"Editorial policies and transparency", b11_desc:"The last questions. Thank you for your time.",
+    b11_eyebrow:"Block 3 of 3", b11_title:"Editorial policies and transparency", b11_desc:"The last questions. Thank you for your time.",
   },
   fr: {
     welcome_title:"Bienvenue sur Teacher AID",
@@ -1988,33 +1979,33 @@ const I18N = {
     sum_c3:"Questionnaire 3 : recherche et IA",
     sum_c3_concern:"Préoccupation moyenne pour les tâches de recherche",
     sum_c3_count:"Vous avez signalé une préoccupation pour {n} tâches sur 13.",
-    b5_eyebrow:"Merci !", b5_title:"Vous avez terminé le questionnaire principal",
-    b5_desc:"Vos réponses ont déjà de la valeur pour l'étude. Si vous le souhaitez, vous pouvez poursuivre avec des blocs facultatifs sur le contexte de votre établissement et, si vous faites de la recherche, sur l'utilisation de l'IA dans votre travail académique. Chaque bloc supplémentaire prend environ 5 minutes.",
+    b5_eyebrow:"Bien joué !", b5_title:"Vous avez terminé le premier bloc",
+    b5_desc:"Vos réponses ont déjà de la valeur pour l'étude. Il reste deux blocs, d'environ 5 minutes chacun, sur le contexte de votre établissement et, si vous faites de la recherche, sur l'utilisation de l'IA dans votre travail académique.",
     b5_notice:'Ces blocs sont entièrement facultatifs. Vous pouvez terminer maintenant en cliquant sur "Envoyer et terminer".',
-    submit_now:"Envoyer et terminer →", continue_optional:"Continuer avec les blocs facultatifs →",
+    submit_now:"Envoyer et terminer →", continue_optional:"Continuer →",
     thanks_title:"Merci pour votre participation !",
     thanks_p1:"Vos réponses ont été enregistrées de manière anonyme. Voici un résumé visuel de vos réponses aux situations présentées. Ce résumé est seulement pour vous, il n'est pas stocké.",
     thanks_p2:"Si vous avez des questions sur l'étude, écrivez à cristina.prego@urjc.es",
     progress:"Étape", of:"sur",
     step_names:["Bienvenue","Qui vous êtes","Situations réelles","Connaissances et bien-être","Formation","Blocs facultatifs","Climat de l'établissement","Familles et élèves","Personnel et résultats","Filtre recherche","Tâches et IA","Politiques éditoriales","Merci"],
-    b6_eyebrow:"Bloc 2 sur 3 · Facultatif", b6_title:"Le climat de votre établissement", b6_desc:"Sur la façon dont l'IA est gérée dans votre établissement.",
+    b6_eyebrow:"Bloc 2 sur 3", b6_title:"Le climat de votre établissement", b6_desc:"Sur la façon dont l'IA est gérée dans votre établissement.",
     sort2_title:"D'où vient l'impulsion vers l'IA dans votre établissement ?",
     sort2_instr:"Si votre établissement a reçu des directives pour intégrer l'IA, faites glisser chaque origine possible vers la zone reflétant son influence.",
-    b7_eyebrow:"Bloc 2 sur 3 · Facultatif", b7_title:"Familles et élèves", b7_desc:"Sur la consultation de la communauté éducative.",
-    b8_eyebrow:"Bloc 2 sur 3 · Facultatif", b8_title:"Personnel et résultats", b8_desc:"Sur votre propre établissement et votre perception du système éducatif en général.",
+    b7_eyebrow:"Bloc 2 sur 3", b7_title:"Familles et élèves", b7_desc:"Sur la consultation de la communauté éducative.",
+    b8_eyebrow:"Bloc 2 sur 3", b8_title:"Personnel et résultats", b8_desc:"Sur votre propre établissement et votre perception du système éducatif en général.",
     b8_notice:"Si vous faites de la recherche, le bloc suivant porte sur l'utilisation de l'IA dans votre travail académique. Sinon, vous pouvez terminer ici.",
     continue_research:"Continuer avec le bloc recherche →",
-    b9_eyebrow:"Bloc 3 sur 3 · Facultatif", b9_title:"L'enseignant-chercheur face à l'IA", b9_desc:"Uniquement pour ceux qui font actuellement de la recherche ou de l'écriture académique.",
+    b9_eyebrow:"Bloc 3 sur 3", b9_title:"L'enseignant-chercheur face à l'IA", b9_desc:"Uniquement pour ceux qui font actuellement de la recherche ou de l'écriture académique.",
     inv1_label:"Faites-vous actuellement de la recherche ou de l'écriture académique (articles, communications, thèse) ?",
     yes:"Oui", no:"Non",
-    b10_eyebrow:"Bloc 3 sur 3 · Facultatif", b10_title:"Tâches de recherche et utilisation de l'IA",
+    b10_eyebrow:"Bloc 3 sur 3", b10_title:"Tâches de recherche et utilisation de l'IA",
     b10_desc:"Pour chaque tâche, imaginez que vous travaillez sur une recherche pour une revue indexée Q1. Indiquez si l'utilisation de l'IA pour cette tâche vous préoccupe. Si oui, indiquez le motif et l'intensité.",
     anchorP0:"Aucune", anchorP1:"Un peu", anchorP2:"Modérée", anchorP3:"Beaucoup", anchorP4:"Maximale",
     concern_q:"L'utilisation de l'IA pour cette tâche vous préoccupe-t-elle ?",
     reasons_label:"Motifs (plusieurs réponses possibles) :",
     other_reason_label:"Autre motif (facultatif)",
     other_reason_ph:"Écrivez ici si vous voulez préciser un autre motif...",
-    b11_eyebrow:"Bloc 3 sur 3 · Facultatif", b11_title:"Politiques éditoriales et transparence", b11_desc:"Les dernières questions. Merci pour votre temps.",
+    b11_eyebrow:"Bloc 3 sur 3", b11_title:"Politiques éditoriales et transparence", b11_desc:"Les dernières questions. Merci pour votre temps.",
   },
   de: {
     welcome_title:"Willkommen bei Teacher AID",
@@ -2060,33 +2051,33 @@ const I18N = {
     sum_c3:"Fragebogen 3: Forschung und KI",
     sum_c3_concern:"Durchschnittliche Sorge bei Forschungsaufgaben",
     sum_c3_count:"Sie haben bei {n} von 13 Aufgaben Sorge angegeben.",
-    b5_eyebrow:"Danke!", b5_title:"Sie haben den Hauptfragebogen abgeschlossen",
-    b5_desc:"Ihre Antworten sind bereits wertvoll für die Studie. Wenn Sie möchten, können Sie mit optionalen Blöcken zum Kontext Ihrer Schule fortfahren und, falls Sie forschen, zur Nutzung von KI in der akademischen Arbeit. Jeder zusätzliche Block dauert etwa 5 Minuten.",
+    b5_eyebrow:"Gut gemacht!", b5_title:"Sie haben den ersten Block abgeschlossen",
+    b5_desc:"Ihre Antworten sind bereits wertvoll für die Studie. Es bleiben noch zwei Blöcke von je etwa 5 Minuten zum Kontext Ihrer Schule und, falls Sie forschen, zur Nutzung von KI in der akademischen Arbeit.",
     b5_notice:'Diese Blöcke sind völlig optional. Sie können jetzt beenden, indem Sie auf "Absenden und beenden" klicken.',
-    submit_now:"Absenden und beenden →", continue_optional:"Mit optionalen Blöcken fortfahren →",
+    submit_now:"Absenden und beenden →", continue_optional:"Weiter →",
     thanks_title:"Danke für Ihre Teilnahme!",
     thanks_p1:"Ihre Antworten wurden anonym erfasst. Hier ist eine visuelle Zusammenfassung Ihrer Antworten zu den vorgestellten Situationen. Diese Zusammenfassung ist nur für Sie, sie wird nicht gespeichert.",
     thanks_p2:"Wenn Sie Fragen zur Studie haben, schreiben Sie an cristina.prego@urjc.es",
     progress:"Schritt", of:"von",
     step_names:["Willkommen","Wer Sie sind","Reale Situationen","Wissen und Wohlbefinden","Schulung","Optionale Blöcke","Schulklima","Familien und Schüler","Personal und Ergebnisse","Forschungsfilter","Aufgaben und KI","Redaktionelle Richtlinien","Danke"],
-    b6_eyebrow:"Block 2 von 3 · Optional", b6_title:"Das Klima Ihrer Schule", b6_desc:"Darüber, wie KI an Ihrer Schule gehandhabt wird.",
+    b6_eyebrow:"Block 2 von 3", b6_title:"Das Klima Ihrer Schule", b6_desc:"Darüber, wie KI an Ihrer Schule gehandhabt wird.",
     sort2_title:"Woher kommt der Impuls zur KI an Ihrer Schule?",
     sort2_instr:"Falls Ihre Schule Richtlinien zur Integration von KI erhalten hat, ziehen Sie jede mögliche Quelle in die Zone, die ihren Einfluss widerspiegelt.",
-    b7_eyebrow:"Block 2 von 3 · Optional", b7_title:"Familien und Schüler", b7_desc:"Darüber, ob die Schulgemeinschaft konsultiert wurde.",
-    b8_eyebrow:"Block 2 von 3 · Optional", b8_title:"Personal und Ergebnisse", b8_desc:"Über Ihre eigene Schule und Ihre Wahrnehmung des Bildungssystems im Allgemeinen.",
+    b7_eyebrow:"Block 2 von 3", b7_title:"Familien und Schüler", b7_desc:"Darüber, ob die Schulgemeinschaft konsultiert wurde.",
+    b8_eyebrow:"Block 2 von 3", b8_title:"Personal und Ergebnisse", b8_desc:"Über Ihre eigene Schule und Ihre Wahrnehmung des Bildungssystems im Allgemeinen.",
     b8_notice:"Wenn Sie forschen, fragt der nächste Block nach der Nutzung von KI in akademischer Arbeit. Wenn nicht, können Sie hier beenden.",
     continue_research:"Mit Forschungsblock fortfahren →",
-    b9_eyebrow:"Block 3 von 3 · Optional", b9_title:"Die forschende Lehrkraft und KI", b9_desc:"Nur für diejenigen, die derzeit forschen oder akademisch schreiben.",
+    b9_eyebrow:"Block 3 von 3", b9_title:"Die forschende Lehrkraft und KI", b9_desc:"Nur für diejenigen, die derzeit forschen oder akademisch schreiben.",
     inv1_label:"Betreiben Sie derzeit akademische Forschung oder Schreiben (z.B. Artikel, Konferenzbeiträge, Dissertation)?",
     yes:"Ja", no:"Nein",
-    b10_eyebrow:"Block 3 von 3 · Optional", b10_title:"Forschungsaufgaben und KI-Nutzung",
+    b10_eyebrow:"Block 3 von 3", b10_title:"Forschungsaufgaben und KI-Nutzung",
     b10_desc:"Stellen Sie sich für jede Aufgabe vor, Sie arbeiten an einer Forschung für eine Q1-indizierte Zeitschrift. Geben Sie an, ob die Nutzung von KI für diese Aufgabe Bedenken hervorruft. Falls ja, geben Sie Grund und Intensität an.",
     anchorP0:"Keine", anchorP1:"Etwas", anchorP2:"Mäßig", anchorP3:"Viel", anchorP4:"Maximal",
     concern_q:"Bereitet Ihnen die Nutzung von KI für diese Aufgabe Sorge?",
     reasons_label:"Gründe (Mehrfachauswahl möglich):",
     other_reason_label:"Anderer Grund (optional)",
     other_reason_ph:"Schreiben Sie hier, wenn Sie einen anderen Grund angeben möchten...",
-    b11_eyebrow:"Block 3 von 3 · Optional", b11_title:"Redaktionelle Richtlinien und Transparenz", b11_desc:"Die letzten Fragen. Danke für Ihre Zeit.",
+    b11_eyebrow:"Block 3 von 3", b11_title:"Redaktionelle Richtlinien und Transparenz", b11_desc:"Die letzten Fragen. Danke für Ihre Zeit.",
   },
   it: {
     welcome_title:"Benvenuto/a su Teacher AID",
@@ -2132,33 +2123,33 @@ const I18N = {
     sum_c3:"Questionario 3: ricerca e IA",
     sum_c3_concern:"Preoccupazione media nelle attività di ricerca",
     sum_c3_count:"Hai segnalato preoccupazione in {n} attività su 13.",
-    b5_eyebrow:"Grazie!", b5_title:"Hai completato il questionario principale",
-    b5_desc:"Le tue risposte hanno già valore per lo studio. Se vuoi, puoi continuare con blocchi facoltativi sul contesto della tua scuola e, se fai ricerca, sull'uso dell'IA nel tuo lavoro accademico. Ogni blocco aggiuntivo richiede circa 5 minuti.",
+    b5_eyebrow:"Ottimo lavoro!", b5_title:"Hai completato il primo blocco",
+    b5_desc:"Le tue risposte hanno già valore per lo studio. Restano altri due blocchi, di circa 5 minuti ciascuno, sul contesto della tua scuola e, se fai ricerca, sull'uso dell'IA nel tuo lavoro accademico.",
     b5_notice:'Questi blocchi sono completamente facoltativi. Puoi terminare ora cliccando su "Invia e termina".',
-    submit_now:"Invia e termina →", continue_optional:"Continua con i blocchi facoltativi →",
+    submit_now:"Invia e termina →", continue_optional:"Continua →",
     thanks_title:"Grazie per la tua partecipazione!",
     thanks_p1:"Le tue risposte sono state registrate in modo anonimo. Ecco un riepilogo visivo delle tue risposte sulle situazioni presentate. Questo riepilogo è solo per te, non viene memorizzato.",
     thanks_p2:"Se hai domande sullo studio, scrivi a cristina.prego@urjc.es",
     progress:"Passo", of:"di",
     step_names:["Benvenuto","Chi sei","Situazioni reali","Conoscenza e benessere","Formazione","Blocchi facoltativi","Clima scolastico","Famiglie e studenti","Personale e risultati","Filtro ricerca","Compiti e IA","Politiche editoriali","Grazie"],
-    b6_eyebrow:"Blocco 2 di 3 · Facoltativo", b6_title:"Il clima della tua scuola", b6_desc:"Su come viene gestita l'IA nella tua scuola.",
+    b6_eyebrow:"Blocco 2 di 3", b6_title:"Il clima della tua scuola", b6_desc:"Su come viene gestita l'IA nella tua scuola.",
     sort2_title:"Da dove viene la spinta verso l'IA nella tua scuola?",
     sort2_instr:"Se la tua scuola ha ricevuto direttive per integrare l'IA, trascina ciascuna possibile fonte nella zona che riflette quanta influenza ha avuto.",
-    b7_eyebrow:"Blocco 2 di 3 · Facoltativo", b7_title:"Famiglie e studenti", b7_desc:"Sul fatto che la comunità scolastica sia stata consultata.",
-    b8_eyebrow:"Blocco 2 di 3 · Facoltativo", b8_title:"Personale e risultati", b8_desc:"Sulla tua scuola e sulla tua percezione del sistema scolastico in generale.",
+    b7_eyebrow:"Blocco 2 di 3", b7_title:"Famiglie e studenti", b7_desc:"Sul fatto che la comunità scolastica sia stata consultata.",
+    b8_eyebrow:"Blocco 2 di 3", b8_title:"Personale e risultati", b8_desc:"Sulla tua scuola e sulla tua percezione del sistema scolastico in generale.",
     b8_notice:"Se fai ricerca, il blocco successivo chiede dell'uso dell'IA nel lavoro accademico. In caso contrario, puoi terminare qui.",
     continue_research:"Continua con il blocco ricerca →",
-    b9_eyebrow:"Blocco 3 di 3 · Facoltativo", b9_title:"Il docente-ricercatore e l'IA", b9_desc:"Solo per chi attualmente fa ricerca o scrittura accademica.",
+    b9_eyebrow:"Blocco 3 di 3", b9_title:"Il docente-ricercatore e l'IA", b9_desc:"Solo per chi attualmente fa ricerca o scrittura accademica.",
     inv1_label:"Attualmente svolgi attività di ricerca o scrittura accademica (articoli, contributi a conferenze, tesi)?",
     yes:"Sì", no:"No",
-    b10_eyebrow:"Blocco 3 di 3 · Facoltativo", b10_title:"Compiti di ricerca e uso dell'IA",
+    b10_eyebrow:"Blocco 3 di 3", b10_title:"Compiti di ricerca e uso dell'IA",
     b10_desc:"Per ogni compito, immagina di lavorare a una ricerca per una rivista indicizzata Q1. Indica se l'uso dell'IA per quel compito ti preoccupa. Se sì, indica il motivo e l'intensità.",
     anchorP0:"Nessuna", anchorP1:"Poca", anchorP2:"Moderata", anchorP3:"Molta", anchorP4:"Massima",
     concern_q:"L'uso dell'IA per questo compito ti preoccupa?",
     reasons_label:"Motivi (selezione multipla):",
     other_reason_label:"Altro motivo (facoltativo)",
     other_reason_ph:"Scrivi qui se vuoi specificare un altro motivo...",
-    b11_eyebrow:"Blocco 3 di 3 · Facoltativo", b11_title:"Politiche editoriali e trasparenza", b11_desc:"Le ultime domande. Grazie per il tuo tempo.",
+    b11_eyebrow:"Blocco 3 di 3", b11_title:"Politiche editoriali e trasparenza", b11_desc:"Le ultime domande. Grazie per il tuo tempo.",
   },
   pt: {
     welcome_title:"Bem-vindo/a ao Teacher AID",
@@ -2204,33 +2195,33 @@ const I18N = {
     sum_c3:"Questionário 3: investigação e IA",
     sum_c3_concern:"Preocupação média nas tarefas de investigação",
     sum_c3_count:"Indicou preocupação em {n} de 13 tarefas.",
-    b5_eyebrow:"Obrigado!", b5_title:"Concluiu o questionário principal",
-    b5_desc:"As suas respostas já têm valor para o estudo. Se quiser, pode continuar com blocos opcionais sobre o contexto da sua escola e, se faz investigação, sobre o uso da IA no seu trabalho académico. Cada bloco extra demora cerca de 5 minutos.",
+    b5_eyebrow:"Muito bem!", b5_title:"Concluiu o primeiro bloco",
+    b5_desc:"As suas respostas já têm valor para o estudo. Faltam dois blocos, de cerca de 5 minutos cada, sobre o contexto da sua escola e, se faz investigação, sobre o uso da IA no seu trabalho académico.",
     b5_notice:'Estes blocos são totalmente opcionais. Pode terminar agora clicando em "Enviar e terminar".',
-    submit_now:"Enviar e terminar →", continue_optional:"Continuar com blocos opcionais →",
+    submit_now:"Enviar e terminar →", continue_optional:"Continuar →",
     thanks_title:"Obrigado pela sua participação!",
     thanks_p1:"As suas respostas foram registadas de forma anónima. Aqui está um resumo visual das suas respostas às situações apresentadas. Este resumo é apenas para si, não é armazenado.",
     thanks_p2:"Se tiver perguntas sobre o estudo, escreva para cristina.prego@urjc.es",
     progress:"Passo", of:"de",
     step_names:["Boas-vindas","Quem é você","Situações reais","Conhecimento e bem-estar","Formação","Blocos opcionais","Clima da escola","Famílias e estudantes","Pessoal e resultados","Filtro de investigação","Tarefas e IA","Políticas editoriais","Obrigado"],
-    b6_eyebrow:"Bloco 2 de 3 · Opcional", b6_title:"O clima da sua escola", b6_desc:"Sobre como a IA está a ser gerida na sua escola.",
+    b6_eyebrow:"Bloco 2 de 3", b6_title:"O clima da sua escola", b6_desc:"Sobre como a IA está a ser gerida na sua escola.",
     sort2_title:"De onde vem o impulso para a IA na sua escola?",
     sort2_instr:"Se a sua escola recebeu diretrizes para integrar a IA, arraste cada possível origem para a zona que reflete quanta influência teve.",
-    b7_eyebrow:"Bloco 2 de 3 · Opcional", b7_title:"Famílias e estudantes", b7_desc:"Sobre se a comunidade educativa foi consultada.",
-    b8_eyebrow:"Bloco 2 de 3 · Opcional", b8_title:"Pessoal e resultados", b8_desc:"Sobre a sua própria escola e a sua percepção do sistema educativo em geral.",
+    b7_eyebrow:"Bloco 2 de 3", b7_title:"Famílias e estudantes", b7_desc:"Sobre se a comunidade educativa foi consultada.",
+    b8_eyebrow:"Bloco 2 de 3", b8_title:"Pessoal e resultados", b8_desc:"Sobre a sua própria escola e a sua percepção do sistema educativo em geral.",
     b8_notice:"Se faz investigação, o próximo bloco pergunta sobre o uso da IA no trabalho académico. Caso contrário, pode terminar aqui.",
     continue_research:"Continuar com o bloco de investigação →",
-    b9_eyebrow:"Bloco 3 de 3 · Opcional", b9_title:"O docente-investigador e a IA", b9_desc:"Apenas para quem atualmente faz investigação ou escrita académica.",
+    b9_eyebrow:"Bloco 3 de 3", b9_title:"O docente-investigador e a IA", b9_desc:"Apenas para quem atualmente faz investigação ou escrita académica.",
     inv1_label:"Realiza atualmente atividade de investigação ou escrita académica (artigos, comunicações, tese)?",
     yes:"Sim", no:"Não",
-    b10_eyebrow:"Bloco 3 de 3 · Opcional", b10_title:"Tarefas de investigação e uso de IA",
+    b10_eyebrow:"Bloco 3 de 3", b10_title:"Tarefas de investigação e uso de IA",
     b10_desc:"Para cada tarefa, imagine que está a trabalhar numa investigação para uma revista indexada Q1. Indique se usar IA nessa tarefa lhe causa preocupação. Se sim, indique o motivo e a intensidade.",
     anchorP0:"Nenhuma", anchorP1:"Pouca", anchorP2:"Moderada", anchorP3:"Bastante", anchorP4:"Máxima",
     concern_q:"Usar IA para esta tarefa causa-lhe preocupação?",
     reasons_label:"Motivos (pode selecionar vários):",
     other_reason_label:"Outro motivo (opcional)",
     other_reason_ph:"Escreva aqui se quiser especificar outro motivo...",
-    b11_eyebrow:"Bloco 3 de 3 · Opcional", b11_title:"Políticas editoriais e transparência", b11_desc:"As últimas perguntas. Obrigado pelo seu tempo.",
+    b11_eyebrow:"Bloco 3 de 3", b11_title:"Políticas editoriais e transparência", b11_desc:"As últimas perguntas. Obrigado pelo seu tempo.",
   },
   pl: {
     welcome_title:"Witamy w Teacher AID",
@@ -2276,33 +2267,33 @@ const I18N = {
     sum_c3:"Kwestionariusz 3: badania i AI",
     sum_c3_concern:"Średni niepokój w zadaniach badawczych",
     sum_c3_count:"Zaznaczyłeś/aś niepokój w {n} z 13 zadań.",
-    b5_eyebrow:"Dziękujemy!", b5_title:"Zakończyłeś/aś główny kwestionariusz",
-    b5_desc:"Twoje odpowiedzi już mają wartość dla badania. Jeśli chcesz, możesz kontynuować z opcjonalnymi blokami dotyczącymi kontekstu Twojej szkoły oraz, jeśli prowadzisz badania, dotyczącymi wykorzystania AI w pracy akademickiej. Każdy dodatkowy blok zajmuje około 5 minut.",
+    b5_eyebrow:"Brawo!", b5_title:"Zakończyłeś/aś pierwszy blok",
+    b5_desc:"Twoje odpowiedzi już mają wartość dla badania. Zostały jeszcze dwa bloki, po około 5 minut każdy, dotyczące kontekstu Twojej szkoły oraz, jeśli prowadzisz badania, wykorzystania AI w pracy akademickiej.",
     b5_notice:'Te bloki są całkowicie opcjonalne. Możesz zakończyć teraz, klikając "Wyślij i zakończ".',
-    submit_now:"Wyślij i zakończ →", continue_optional:"Kontynuuj z opcjonalnymi blokami →",
+    submit_now:"Wyślij i zakończ →", continue_optional:"Dalej →",
     thanks_title:"Dziękujemy za udział!",
     thanks_p1:"Twoje odpowiedzi zostały zarejestrowane anonimowo. Tutaj znajduje się wizualne podsumowanie Twoich odpowiedzi na przedstawione sytuacje. To podsumowanie jest tylko dla Ciebie, nie jest przechowywane.",
     thanks_p2:"Jeśli masz pytania dotyczące badania, napisz na cristina.prego@urjc.es",
     progress:"Krok", of:"z",
     step_names:["Witamy","Kim jesteś","Rzeczywiste sytuacje","Wiedza i dobrostan","Szkolenie","Opcjonalne bloki","Klimat szkoły","Rodziny i uczniowie","Personel i wyniki","Filtr badawczy","Zadania i AI","Polityki redakcyjne","Dziękujemy"],
-    b6_eyebrow:"Blok 2 z 3 · Opcjonalny", b6_title:"Klimat Twojej szkoły", b6_desc:"O tym, jak AI jest zarządzana w Twojej szkole.",
+    b6_eyebrow:"Blok 2 z 3", b6_title:"Klimat Twojej szkoły", b6_desc:"O tym, jak AI jest zarządzana w Twojej szkole.",
     sort2_title:"Skąd pochodzi impuls do AI w Twojej szkole?",
     sort2_instr:"Jeśli Twoja szkoła otrzymała wytyczne dotyczące integracji AI, przeciągnij każde możliwe źródło do strefy odzwierciedlającej jego wpływ.",
-    b7_eyebrow:"Blok 2 z 3 · Opcjonalny", b7_title:"Rodziny i uczniowie", b7_desc:"O tym, czy społeczność szkolna została skonsultowana.",
-    b8_eyebrow:"Blok 2 z 3 · Opcjonalny", b8_title:"Personel i wyniki", b8_desc:"O Twojej własnej szkole i Twoim postrzeganiu systemu edukacji w ogóle.",
+    b7_eyebrow:"Blok 2 z 3", b7_title:"Rodziny i uczniowie", b7_desc:"O tym, czy społeczność szkolna została skonsultowana.",
+    b8_eyebrow:"Blok 2 z 3", b8_title:"Personel i wyniki", b8_desc:"O Twojej własnej szkole i Twoim postrzeganiu systemu edukacji w ogóle.",
     b8_notice:"Jeśli prowadzisz badania, następny blok pyta o wykorzystanie AI w pracy akademickiej. Jeśli nie, możesz zakończyć tutaj.",
     continue_research:"Kontynuuj z blokiem badawczym →",
-    b9_eyebrow:"Blok 3 z 3 · Opcjonalny", b9_title:"Nauczyciel-badacz a AI", b9_desc:"Tylko dla osób, które aktualnie prowadzą badania lub piszą teksty akademickie.",
+    b9_eyebrow:"Blok 3 z 3", b9_title:"Nauczyciel-badacz a AI", b9_desc:"Tylko dla osób, które aktualnie prowadzą badania lub piszą teksty akademickie.",
     inv1_label:"Czy aktualnie zajmujesz się badaniami naukowymi lub pisaniem akademickim (artykuły, referaty konferencyjne, praca doktorska)?",
     yes:"Tak", no:"Nie",
-    b10_eyebrow:"Blok 3 z 3 · Opcjonalny", b10_title:"Zadania badawcze i wykorzystanie AI",
+    b10_eyebrow:"Blok 3 z 3", b10_title:"Zadania badawcze i wykorzystanie AI",
     b10_desc:"Dla każdego zadania wyobraź sobie, że pracujesz nad badaniem dla czasopisma indeksowanego Q1. Wskaż, czy wykorzystanie AI do tego zadania wywołuje niepokój. Jeśli tak, wskaż powód i intensywność.",
     anchorP0:"Brak", anchorP1:"Mały", anchorP2:"Umiarkowany", anchorP3:"Duży", anchorP4:"Maksymalny",
     concern_q:"Czy wykorzystanie AI do tego zadania wywołuje u Ciebie niepokój?",
     reasons_label:"Powody (można wybrać kilka):",
     other_reason_label:"Inny powód (opcjonalnie)",
     other_reason_ph:"Napisz tutaj, jeśli chcesz podać inny powód...",
-    b11_eyebrow:"Blok 3 z 3 · Opcjonalny", b11_title:"Polityki redakcyjne i przejrzystość", b11_desc:"Ostatnie pytania. Dziękujemy za Twój czas.",
+    b11_eyebrow:"Blok 3 z 3", b11_title:"Polityki redakcyjne i przejrzystość", b11_desc:"Ostatnie pytania. Dziękujemy za Twój czas.",
   },
   nl: {
     welcome_title:"Welkom bij Teacher AID",
@@ -2348,33 +2339,33 @@ const I18N = {
     sum_c3:"Vragenlijst 3: onderzoek en AI",
     sum_c3_concern:"Gemiddelde bezorgdheid over onderzoekstaken",
     sum_c3_count:"U gaf bezorgdheid aan bij {n} van de 13 taken.",
-    b5_eyebrow:"Dank u!", b5_title:"U heeft de hoofdvragenlijst voltooid",
-    b5_desc:"Uw antwoorden hebben al waarde voor het onderzoek. Als u wilt, kunt u doorgaan met optionele blokken over de context van uw school en, als u onderzoek doet, over het gebruik van AI in academisch werk. Elk extra blok duurt ongeveer 5 minuten.",
+    b5_eyebrow:"Goed gedaan!", b5_title:"U heeft het eerste blok voltooid",
+    b5_desc:"Uw antwoorden hebben al waarde voor het onderzoek. Er volgen nog twee blokken van ongeveer 5 minuten over de context van uw school en, als u onderzoek doet, over het gebruik van AI in academisch werk.",
     b5_notice:'Deze blokken zijn volledig optioneel. U kunt nu afronden door op "Verzenden en afronden" te klikken.',
-    submit_now:"Verzenden en afronden →", continue_optional:"Doorgaan met optionele blokken →",
+    submit_now:"Verzenden en afronden →", continue_optional:"Doorgaan →",
     thanks_title:"Dank u voor uw deelname!",
     thanks_p1:"Uw antwoorden zijn anoniem geregistreerd. Hier is een visueel overzicht van uw antwoorden op de gepresenteerde situaties. Dit overzicht is alleen voor u, het wordt niet opgeslagen.",
     thanks_p2:"Als u vragen heeft over het onderzoek, schrijf naar cristina.prego@urjc.es",
     progress:"Stap", of:"van",
     step_names:["Welkom","Wie u bent","Reële situaties","Kennis en welzijn","Training","Optionele blokken","Schoolklimaat","Gezinnen en leerlingen","Personeel en resultaten","Onderzoeksfilter","Taken en AI","Redactioneel beleid","Dank u"],
-    b6_eyebrow:"Blok 2 van 3 · Optioneel", b6_title:"Het klimaat van uw school", b6_desc:"Over hoe AI op uw school wordt beheerd.",
+    b6_eyebrow:"Blok 2 van 3", b6_title:"Het klimaat van uw school", b6_desc:"Over hoe AI op uw school wordt beheerd.",
     sort2_title:"Waar komt de drijfveer voor AI op uw school vandaan?",
     sort2_instr:"Als uw school richtlijnen heeft ontvangen om AI te integreren, sleep dan elke mogelijke bron naar de zone die de invloed weerspiegelt.",
-    b7_eyebrow:"Blok 2 van 3 · Optioneel", b7_title:"Gezinnen en leerlingen", b7_desc:"Over of de schoolgemeenschap is geraadpleegd.",
-    b8_eyebrow:"Blok 2 van 3 · Optioneel", b8_title:"Personeel en resultaten", b8_desc:"Over uw eigen school en uw perceptie van het onderwijssysteem in het algemeen.",
+    b7_eyebrow:"Blok 2 van 3", b7_title:"Gezinnen en leerlingen", b7_desc:"Over of de schoolgemeenschap is geraadpleegd.",
+    b8_eyebrow:"Blok 2 van 3", b8_title:"Personeel en resultaten", b8_desc:"Over uw eigen school en uw perceptie van het onderwijssysteem in het algemeen.",
     b8_notice:"Als u onderzoek doet, vraagt het volgende blok naar het gebruik van AI in academisch werk. Zo niet, dan kunt u hier afronden.",
     continue_research:"Doorgaan met onderzoeksblok →",
-    b9_eyebrow:"Blok 3 van 3 · Optioneel", b9_title:"De onderzoekende leraar en AI", b9_desc:"Alleen voor wie momenteel onderzoek doet of academisch schrijft.",
+    b9_eyebrow:"Blok 3 van 3", b9_title:"De onderzoekende leraar en AI", b9_desc:"Alleen voor wie momenteel onderzoek doet of academisch schrijft.",
     inv1_label:"Doet u momenteel academisch onderzoek of schrijfwerk (artikelen, conferentiebijdragen, proefschrift)?",
     yes:"Ja", no:"Nee",
-    b10_eyebrow:"Blok 3 van 3 · Optioneel", b10_title:"Onderzoekstaken en AI-gebruik",
+    b10_eyebrow:"Blok 3 van 3", b10_title:"Onderzoekstaken en AI-gebruik",
     b10_desc:"Stel u voor elke taak voor dat u werkt aan onderzoek voor een Q1-geïndexeerd tijdschrift. Geef aan of het gebruik van AI voor die taak bezorgdheid oproept. Zo ja, geef de reden en intensiteit aan.",
     anchorP0:"Geen", anchorP1:"Weinig", anchorP2:"Matig", anchorP3:"Veel", anchorP4:"Maximaal",
     concern_q:"Roept het gebruik van AI voor deze taak bezorgdheid bij u op?",
     reasons_label:"Redenen (meerdere mogelijk):",
     other_reason_label:"Andere reden (optioneel)",
     other_reason_ph:"Schrijf hier als u een andere reden wilt opgeven...",
-    b11_eyebrow:"Blok 3 van 3 · Optioneel", b11_title:"Redactioneel beleid en transparantie", b11_desc:"De laatste vragen. Dank u voor uw tijd.",
+    b11_eyebrow:"Blok 3 van 3", b11_title:"Redactioneel beleid en transparantie", b11_desc:"De laatste vragen. Dank u voor uw tijd.",
   }
 };
 
@@ -2383,7 +2374,7 @@ const I18N = {
    ============================================================ */
 let currentLang = 'es';
 let currentStep = 0;
-let totalSteps = 6; // dynamic: 6 (C1 only), 9 (C1+C2), or 12 (C1+C2+C3)
+const totalSteps = 12; // fixed: shows progress out of the full 12-step journey
 const responses = {}; // id -> {value, nsab}
 
 // Fallback helper: returns dataset[lang] if it exists, else dataset['en'], else dataset['es']
@@ -2906,14 +2897,13 @@ function applyTranslations(){
 }
 
 function updateProgress(){
-  // Map the absolute step index to a "display step" within the current path,
-  // so the counter never shows a number higher than the path's total.
-  let displayStep = currentStep;
-  if(totalSteps === 12 && currentStep === 12) displayStep = 12; // full path, thank-you = 12
-  else if(currentStep > totalSteps) displayStep = totalSteps; // safety clamp
-  const pct = Math.round((displayStep/totalSteps)*100);
+  const pct = Math.round((currentStep/totalSteps)*100);
   document.getElementById('progressFill').style.width = pct+'%';
-  document.getElementById('progressLabel').textContent = `${T('progress')} ${displayStep} ${T('of')} ${totalSteps} — ${T('step_names')[currentStep]}`;
+  if(currentStep === 12){
+    document.getElementById('progressLabel').textContent = T('step_names')[12];
+  } else {
+    document.getElementById('progressLabel').textContent = `${T('progress')} ${currentStep} ${T('of')} ${totalSteps} — ${T('step_names')[currentStep]}`;
+  }
 }
 
 function showStep(step){
@@ -3041,21 +3031,6 @@ document.querySelectorAll('[data-prev]').forEach(btn => {
   btn.addEventListener('click', () => { if(currentStep>0) showStep(currentStep-1); });
 });
 
-// Step 5 (optional branch after C1)
-document.getElementById('submitNowBtn').addEventListener('click', () => {
-  submitResponses();
-  renderProfile();
-  showStep(12);
-});
-document.getElementById('continueOptionalBtn').addEventListener('click', () => { totalSteps = 9; showStep(6); });
-
-// Step 8 (end of C2 -> submit or continue to C3)
-document.getElementById('submitAfterC2Btn').addEventListener('click', () => {
-  submitResponses();
-  renderProfile();
-  showStep(12);
-});
-
 // Step 9 (INV1 filter)
 document.getElementById('inv1Yes').addEventListener('click', () => {
   document.getElementById('inv1Yes').classList.add('selected');
@@ -3073,7 +3048,6 @@ document.getElementById('inv1NextBtn').addEventListener('click', () => {
     renderProfile();
     showStep(12);
   } else {
-    totalSteps = 12;
     showStep(10);
   }
 });
