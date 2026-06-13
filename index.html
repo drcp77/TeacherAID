@@ -120,6 +120,8 @@
   .sort-card{background:var(--cream); border:1px solid var(--border); border-radius:8px; padding:6px 10px; font-size:12.5px; cursor:grab; user-select:none}
   .sort-card.dragging{opacity:.4}
   .sort-card:active{cursor:grabbing}
+  .sort-card.selected{background:var(--navy); color:#fff; border-color:var(--navy); box-shadow:0 0 0 3px rgba(26,58,92,.2)}
+  .sort-hint{font-size:11.5px; color:var(--grey-light); margin-bottom:8px; font-style:italic}
 
   /* NAV */
   .nav-row{display:flex; justify-content:space-between; align-items:center; margin-top:28px; gap:12px}
@@ -344,6 +346,7 @@
     <div class="card sorting-card">
       <div class="sorting-title" data-i18n="sort1_title">¿De dónde procede tu conocimiento sobre IA?</div>
       <div class="sorting-instr" data-i18n="sort1_instr">Arrastra cada tarjeta a la zona que mejor refleje cuánto ha contribuido esa fuente a tu conocimiento actual.</div>
+      <div class="sort-hint" data-i18n="sort_hint">En móvil: toca una tarjeta y luego toca la zona donde quieras colocarla.</div>
       <div class="sort-zones" id="sortZones1"></div>
       <div class="sort-pool" id="sortPool1"></div>
     </div>
@@ -428,6 +431,7 @@
     <div class="card sorting-card">
       <div class="sorting-title" data-i18n="sort2_title">¿De dónde viene el impulso hacia la IA en tu centro?</div>
       <div class="sorting-instr" data-i18n="sort2_instr">Si tu centro ha recibido directrices para integrar la IA, arrastra cada posible origen a la zona que refleje cuánto ha influido.</div>
+      <div class="sort-hint" data-i18n="sort_hint">En móvil: toca una tarjeta y luego toca la zona donde quieras colocarla.</div>
       <div class="sort-zones" id="sortZones2"></div>
       <div class="sort-pool" id="sortPool2"></div>
     </div>
@@ -1816,6 +1820,7 @@ const I18N = {
     tr1_label:"¿Qué tipos de formación en IA has recibido? (varias opciones)",
     tr2_label:"Horas aproximadas de formación en los últimos 2 años", tr2_none:"Ninguna", tr2_more:"Más de 30",
     nsab:"No sabría responder a esto",
+    sort_hint:"En móvil: toca una tarjeta y luego toca la zona donde quieras colocarla.",
     b5_eyebrow:"¡Gracias!", b5_title:"Has completado el cuestionario principal",
     b5_desc:"Tus respuestas ya tienen valor para el estudio. Si quieres, puedes continuar con bloques adicionales opcionales sobre el contexto de tu centro y, si haces investigación, sobre el uso de IA en tu trabajo académico. Cada bloque adicional son unos 5 minutos.",
     b5_notice:'Estos bloques son completamente opcionales. Puedes finalizar ahora pulsando "Enviar y finalizar".',
@@ -1877,6 +1882,7 @@ const I18N = {
     tr1_label:"What types of AI training have you received? (select all that apply)",
     tr2_label:"Approximate hours of training in the last 2 years", tr2_none:"None", tr2_more:"More than 30",
     nsab:"I would not know how to answer this",
+    sort_hint:"On mobile: tap a card, then tap the zone where you want to place it.",
     b5_eyebrow:"Thank you!", b5_title:"You have completed the main questionnaire",
     b5_desc:"Your answers already have value for the study. If you'd like, you can continue with optional blocks about your school's context and, if you do research, about using AI in academic work. Each extra block takes about 5 minutes.",
     b5_notice:'These blocks are entirely optional. You can finish now by clicking "Submit and finish".',
@@ -1938,6 +1944,7 @@ const I18N = {
     tr1_label:"Quels types de formation en IA avez-vous reçus ? (plusieurs réponses possibles)",
     tr2_label:"Heures approximatives de formation au cours des 2 dernières années", tr2_none:"Aucune", tr2_more:"Plus de 30",
     nsab:"Je ne saurais pas répondre à cela",
+    sort_hint:"Sur mobile : touchez une carte, puis touchez la zone où la placer.",
     b5_eyebrow:"Merci !", b5_title:"Vous avez terminé le questionnaire principal",
     b5_desc:"Vos réponses ont déjà de la valeur pour l'étude. Si vous le souhaitez, vous pouvez poursuivre avec des blocs facultatifs sur le contexte de votre établissement et, si vous faites de la recherche, sur l'utilisation de l'IA dans votre travail académique. Chaque bloc supplémentaire prend environ 5 minutes.",
     b5_notice:'Ces blocs sont entièrement facultatifs. Vous pouvez terminer maintenant en cliquant sur "Envoyer et terminer".',
@@ -1999,6 +2006,7 @@ const I18N = {
     tr1_label:"Welche Arten von KI-Schulungen haben Sie erhalten? (Mehrfachauswahl möglich)",
     tr2_label:"Ungefähre Schulungsstunden in den letzten 2 Jahren", tr2_none:"Keine", tr2_more:"Mehr als 30",
     nsab:"Ich wüsste nicht, wie ich das beantworten soll",
+    sort_hint:"Auf dem Handy: Karte antippen, dann die gewünschte Zone antippen.",
     b5_eyebrow:"Danke!", b5_title:"Sie haben den Hauptfragebogen abgeschlossen",
     b5_desc:"Ihre Antworten sind bereits wertvoll für die Studie. Wenn Sie möchten, können Sie mit optionalen Blöcken zum Kontext Ihrer Schule fortfahren und, falls Sie forschen, zur Nutzung von KI in der akademischen Arbeit. Jeder zusätzliche Block dauert etwa 5 Minuten.",
     b5_notice:'Diese Blöcke sind völlig optional. Sie können jetzt beenden, indem Sie auf "Absenden und beenden" klicken.',
@@ -2060,6 +2068,7 @@ const I18N = {
     tr1_label:"Che tipo di formazione sull'IA hai ricevuto? (selezione multipla)",
     tr2_label:"Ore approssimative di formazione negli ultimi 2 anni", tr2_none:"Nessuna", tr2_more:"Più di 30",
     nsab:"Non saprei come rispondere",
+    sort_hint:"Su dispositivo mobile: tocca una carta, poi tocca la zona in cui posizionarla.",
     b5_eyebrow:"Grazie!", b5_title:"Hai completato il questionario principale",
     b5_desc:"Le tue risposte hanno già valore per lo studio. Se vuoi, puoi continuare con blocchi facoltativi sul contesto della tua scuola e, se fai ricerca, sull'uso dell'IA nel tuo lavoro accademico. Ogni blocco aggiuntivo richiede circa 5 minuti.",
     b5_notice:'Questi blocchi sono completamente facoltativi. Puoi terminare ora cliccando su "Invia e termina".',
@@ -2121,6 +2130,7 @@ const I18N = {
     tr1_label:"Que tipos de formação em IA recebeu? (pode selecionar várias)",
     tr2_label:"Horas aproximadas de formação nos últimos 2 anos", tr2_none:"Nenhuma", tr2_more:"Mais de 30",
     nsab:"Não saberia responder a isto",
+    sort_hint:"No telemóvel: toque num cartão e depois toque na zona onde o quer colocar.",
     b5_eyebrow:"Obrigado!", b5_title:"Concluiu o questionário principal",
     b5_desc:"As suas respostas já têm valor para o estudo. Se quiser, pode continuar com blocos opcionais sobre o contexto da sua escola e, se faz investigação, sobre o uso da IA no seu trabalho académico. Cada bloco extra demora cerca de 5 minutos.",
     b5_notice:'Estes blocos são totalmente opcionais. Pode terminar agora clicando em "Enviar e terminar".',
@@ -2182,6 +2192,7 @@ const I18N = {
     tr1_label:"Jakie rodzaje szkoleń z AI otrzymałeś/aś? (można wybrać kilka)",
     tr2_label:"Przybliżona liczba godzin szkolenia w ostatnich 2 latach", tr2_none:"Brak", tr2_more:"Więcej niż 30",
     nsab:"Nie wiedziałbym/abym jak na to odpowiedzieć",
+    sort_hint:"Na telefonie: dotknij karty, a potem dotknij strefy, w której chcesz ją umieścić.",
     b5_eyebrow:"Dziękujemy!", b5_title:"Zakończyłeś/aś główny kwestionariusz",
     b5_desc:"Twoje odpowiedzi już mają wartość dla badania. Jeśli chcesz, możesz kontynuować z opcjonalnymi blokami dotyczącymi kontekstu Twojej szkoły oraz, jeśli prowadzisz badania, dotyczącymi wykorzystania AI w pracy akademickiej. Każdy dodatkowy blok zajmuje około 5 minut.",
     b5_notice:'Te bloki są całkowicie opcjonalne. Możesz zakończyć teraz, klikając "Wyślij i zakończ".',
@@ -2243,6 +2254,7 @@ const I18N = {
     tr1_label:"Welke soorten AI-training heeft u ontvangen? (meerdere antwoorden mogelijk)",
     tr2_label:"Geschatte uren training in de afgelopen 2 jaar", tr2_none:"Geen", tr2_more:"Meer dan 30",
     nsab:"Ik zou dit niet kunnen beantwoorden",
+    sort_hint:"Op mobiel: tik op een kaart en tik daarna op de zone waar u die wilt plaatsen.",
     b5_eyebrow:"Dank u!", b5_title:"U heeft de hoofdvragenlijst voltooid",
     b5_desc:"Uw antwoorden hebben al waarde voor het onderzoek. Als u wilt, kunt u doorgaan met optionele blokken over de context van uw school en, als u onderzoek doet, over het gebruik van AI in academisch werk. Elk extra blok duurt ongeveer 5 minuten.",
     b5_notice:'Deze blokken zijn volledig optioneel. U kunt nu afronden door op "Verzenden en afronden" te klikken.',
@@ -2504,6 +2516,15 @@ function buildSortingBlock(zonesElId, poolElId, items, zoneNames, sortKey){
   zonesEl.innerHTML = ''; poolEl.innerHTML = '';
   if(zoneNames.length > 4){ zonesEl.style.gridTemplateColumns = 'repeat(3,1fr)'; } else { zonesEl.style.gridTemplateColumns = 'repeat(4,1fr)'; }
 
+  let selectedCard = null;
+
+  function placeCard(card, zone, zi){
+    zone.appendChild(card);
+    card.classList.remove('selected');
+    responses[sortKey+'_'+card.dataset.idx] = {value: zi};
+    if(selectedCard === card) selectedCard = null;
+  }
+
   zoneNames.forEach((zoneName, zi) => {
     const zone = document.createElement('div');
     zone.className = 'sort-zone';
@@ -2517,10 +2538,12 @@ function buildSortingBlock(zonesElId, poolElId, items, zoneNames, sortKey){
     zone.ondrop = (e)=>{
       e.preventDefault(); zone.classList.remove('dragover');
       const dragged = document.querySelector('.sort-card.dragging');
-      if(dragged){ zone.appendChild(dragged);
-        responses[sortKey+'_'+dragged.dataset.idx] = {value: zi};
-      }
+      if(dragged) placeCard(dragged, zone, zi);
     };
+    // Tap-to-place: if a card is selected, tapping a zone places it here
+    zone.addEventListener('click', ()=>{
+      if(selectedCard) placeCard(selectedCard, zone, zi);
+    });
     zonesEl.appendChild(zone);
   });
 
@@ -2530,6 +2553,12 @@ function buildSortingBlock(zonesElId, poolElId, items, zoneNames, sortKey){
     const dragged = document.querySelector('.sort-card.dragging');
     if(dragged){ poolEl.appendChild(dragged); delete responses[sortKey+'_'+dragged.dataset.idx]; }
   };
+  poolEl.addEventListener('click', (e)=>{
+    if(e.target === poolEl && selectedCard){
+      poolEl.appendChild(selectedCard); delete responses[sortKey+'_'+selectedCard.dataset.idx];
+      selectedCard.classList.remove('selected'); selectedCard = null;
+    }
+  });
 
   items.forEach((label, i) => {
     const c = document.createElement('div');
@@ -2539,6 +2568,16 @@ function buildSortingBlock(zonesElId, poolElId, items, zoneNames, sortKey){
     c.dataset.idx = i;
     c.ondragstart = ()=> c.classList.add('dragging');
     c.ondragend = ()=> c.classList.remove('dragging');
+    // Tap-to-select: works on touch and desktop alike
+    c.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      if(selectedCard === c){
+        c.classList.remove('selected'); selectedCard = null;
+      } else {
+        if(selectedCard) selectedCard.classList.remove('selected');
+        selectedCard = c; c.classList.add('selected');
+      }
+    });
     poolEl.appendChild(c);
   });
 }
