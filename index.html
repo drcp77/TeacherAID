@@ -144,6 +144,8 @@
   .consent-check input{margin-top:3px; accent-color:var(--orange)}
   .howto-box{background:var(--cream); border:1px solid var(--border); border-radius:10px; padding:14px 16px; max-width:480px; margin:0 auto 18px; text-align:left}
   .howto-title{font-size:12px; font-weight:800; color:var(--navy); text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px}
+  .howto-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px}
+  .howto-head .howto-title{margin-bottom:0}
   .howto-item{display:flex; align-items:flex-start; gap:8px; font-size:12.5px; color:var(--grey); margin-bottom:6px; line-height:1.4}
   .howto-icon{flex-shrink:0; width:16px; height:16px; border-radius:50%; background:var(--navy); color:#fff; font-size:10px; font-weight:800; display:flex; align-items:center; justify-content:center; margin-top:2px}
 
@@ -219,7 +221,10 @@
       </div>
 
       <div class="howto-box">
-        <div class="howto-title" data-i18n="howto_title">Cómo responder</div>
+        <div class="howto-head">
+          <div class="howto-title" data-i18n="howto_title">Cómo responder</div>
+          <button class="speak-btn" id="welcomeSpeakBtn" aria-label="audio">🔊</button>
+        </div>
         <div class="howto-item">
           <span class="howto-icon">1</span>
           <span data-i18n="howto_slider">Deslizadores: arrastra el círculo, o tócalo y usa las flechas del teclado en ordenador.</span>
@@ -584,7 +589,10 @@
   <!-- STEP 12: THANK YOU -->
   <section class="block" data-step="12">
     <div class="consent-box">
-      <h1 data-i18n="thanks_title">¡Gracias por tu participación!</h1>
+      <div style="display:flex; align-items:center; justify-content:center; gap:10px;">
+        <h1 data-i18n="thanks_title" style="margin:0">¡Gracias por tu participación!</h1>
+        <button class="speak-btn" id="thanksSpeakBtn" aria-label="audio">🔊</button>
+      </div>
       <p class="consent-text" data-i18n="thanks_p1" style="text-align:center; margin-bottom:24px">
         Tus respuestas se han registrado de forma anónima. Aquí tienes un resumen visual de tus respuestas sobre las situaciones planteadas.
         Este resumen es solo para ti, no se almacena.
@@ -2440,7 +2448,7 @@ function buildSliderCard(item, anchors, idPrefix, compact){
     stmt.className = 'slider-statement';
     stmt.textContent = item.text;
     top.appendChild(stmt);
-    if(!compact){
+    if(item.text){
       const speakBtn = document.createElement('button');
       speakBtn.className = 'speak-btn';
       speakBtn.setAttribute('aria-label','audio');
@@ -2921,6 +2929,7 @@ function renderProfile(){
   const container = document.getElementById('profileResults');
   container.innerHTML = '';
   let any = false;
+  let summaryParts = [];
 
   const sectionTitle = (text) => {
     const h = document.createElement('div');
@@ -2929,6 +2938,7 @@ function renderProfile(){
     h.style.margin = '18px 0 8px';
     h.textContent = text;
     container.appendChild(h);
+    summaryParts.push(text + '.');
   };
   const bar = (label, val) => {
     const lvl = getLevel(val);
@@ -2940,6 +2950,7 @@ function renderProfile(){
       <span class="result-val">${Math.round(val)}%</span>
     `;
     container.appendChild(row);
+    summaryParts.push(`${label}: ${Math.round(val)}%.`);
   };
 
   // --- C1: vignettes ---
@@ -2980,12 +2991,14 @@ function renderProfile(){
       note.style.fontSize = '12px'; note.style.color = 'var(--grey-light)'; note.style.marginTop = '6px';
       note.textContent = T('sum_c3_count').replace('{n}', intensities.length);
       container.appendChild(note);
+      summaryParts.push(note.textContent);
     }
   }
 
   if(!any){
     container.innerHTML = `<p style="text-align:center;color:var(--grey-light);font-size:13px">—</p>`;
   }
+  window.lastSummaryText = summaryParts.join(' ');
 }
 
 /* ============================================================
@@ -3062,6 +3075,18 @@ document.getElementById('submitFinalBtn').addEventListener('click', () => {
 // init
 applyTranslations();
 renderAll();
+
+// Welcome screen audio: consent + how-to-respond
+document.getElementById('welcomeSpeakBtn').addEventListener('click', () => {
+  const text = [T('welcome_check'), T('howto_title'), T('howto_slider'), T('howto_vignette'), T('howto_sort')].join('. ');
+  speak(text, currentLang, document.getElementById('welcomeSpeakBtn'));
+});
+
+// Thank-you screen audio: thanks message + personalized summary
+document.getElementById('thanksSpeakBtn').addEventListener('click', () => {
+  const text = [T('thanks_title'), T('thanks_p1'), window.lastSummaryText || '', T('thanks_p2')].join('. ');
+  speak(text, currentLang, document.getElementById('thanksSpeakBtn'));
+});
 </script>
 
 </body>
