@@ -113,11 +113,11 @@
   .sorting-title{font-size:15px; font-weight:800; color:var(--navy); margin-bottom:6px}
   .sorting-instr{font-size:13px; font-style:italic; color:var(--navy-light); margin-bottom:12px}
   .sort-zones{display:grid; grid-template-columns:repeat(4,1fr); gap:6px; margin-bottom:12px}
-  .sort-zone{border:2px dashed var(--border); border-radius:10px; padding:8px 6px; min-height:64px; background:#fff}
+  .sort-zone{border:2px dashed var(--border); border-radius:10px; padding:8px 4px; min-height:64px; background:#fff; display:flex; flex-direction:column; gap:4px; overflow:hidden}
   .sort-zone.dragover{border-color:var(--orange); background:#fdf6f3}
-  .sort-zone-label{font-size:10.5px; font-weight:700; color:var(--grey); text-align:center; margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em}
-  .sort-pool{display:flex; flex-wrap:wrap; gap:8px; padding:10px; background:#fff; border-radius:10px; border:1px solid var(--border); margin-bottom:8px}
-  .sort-card{background:var(--cream); border:1px solid var(--border); border-radius:8px; padding:6px 10px; font-size:12.5px; cursor:grab; user-select:none}
+  .sort-zone-label{font-size:10px; font-weight:700; color:var(--grey); text-align:center; margin-bottom:4px; text-transform:uppercase; letter-spacing:.03em; word-break:break-word}
+  .sort-pool{display:flex; flex-wrap:wrap; gap:6px; padding:10px; background:#fff; border-radius:10px; border:1px solid var(--border); margin-bottom:8px}
+  .sort-card{background:var(--cream); border:1px solid var(--border); border-radius:8px; padding:6px 8px; font-size:11.5px; line-height:1.25; cursor:grab; user-select:none; max-width:100%; word-break:break-word; box-sizing:border-box; text-align:center}
   .sort-card.dragging{opacity:.4}
   .sort-card:active{cursor:grabbing}
   .sort-card.selected{background:var(--navy); color:#fff; border-color:var(--navy); box-shadow:0 0 0 3px rgba(26,58,92,.2)}
@@ -142,6 +142,10 @@
   .consent-links a{color:var(--teal); text-decoration:none}
   .consent-check{display:flex; align-items:flex-start; gap:8px; text-align:left; max-width:460px; margin:0 auto 20px; font-size:13px; color:var(--ink)}
   .consent-check input{margin-top:3px; accent-color:var(--orange)}
+  .howto-box{background:var(--cream); border:1px solid var(--border); border-radius:10px; padding:14px 16px; max-width:480px; margin:0 auto 18px; text-align:left}
+  .howto-title{font-size:12px; font-weight:800; color:var(--navy); text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px}
+  .howto-item{display:flex; align-items:flex-start; gap:8px; font-size:12.5px; color:var(--grey); margin-bottom:6px; line-height:1.4}
+  .howto-icon{flex-shrink:0; font-size:15px}
 
   /* OPTIONAL BLOCK NOTICE */
   .optional-notice{background:#FAEEDA; border:1px solid #f0d4a8; border-radius:10px; padding:12px 16px; font-size:13px; color:#854f0b; margin-bottom:18px}
@@ -213,6 +217,23 @@
         Más información: <a href="#" target="_blank">Hoja de Información al Participante</a> ·
         <a href="#" target="_blank">Memoria del proyecto</a>
       </div>
+
+      <div class="howto-box">
+        <div class="howto-title" data-i18n="howto_title">Cómo responder</div>
+        <div class="howto-item">
+          <span class="howto-icon">🎚️</span>
+          <span data-i18n="howto_slider">Deslizadores: arrastra el círculo, o tócalo y usa las flechas del teclado en ordenador.</span>
+        </div>
+        <div class="howto-item">
+          <span class="howto-icon">📋</span>
+          <span data-i18n="howto_vignette">Viñetas: lee la situación y mueve el deslizador según el nivel de inquietud que te genere.</span>
+        </div>
+        <div class="howto-item">
+          <span class="howto-icon">🗂️</span>
+          <span data-i18n="howto_sort">Tarjetas: en ordenador, arrástralas; en móvil, toca la tarjeta y luego toca la zona donde quieras colocarla.</span>
+        </div>
+      </div>
+
       <label class="consent-check">
         <input type="checkbox" id="consentCheck">
         <span data-i18n="welcome_check">Confirmo que soy docente en activo en un centro educativo, que he leído la Hoja de Información, y que mi participación es informada, voluntaria y anónima.</span>
@@ -1821,6 +1842,10 @@ const I18N = {
     tr2_label:"Horas aproximadas de formación en los últimos 2 años", tr2_none:"Ninguna", tr2_more:"Más de 30",
     nsab:"No sabría responder a esto",
     sort_hint:"En móvil: toca una tarjeta y luego toca la zona donde quieras colocarla.",
+    howto_title:"Cómo responder",
+    howto_slider:"Deslizadores: arrastra el círculo, o tócalo y usa las flechas del teclado en ordenador.",
+    howto_vignette:"Viñetas: lee la situación y mueve el deslizador según el nivel de inquietud que te genere.",
+    howto_sort:"Tarjetas: en ordenador, arrástralas; en móvil, toca la tarjeta y luego toca la zona donde quieras colocarla.",
     b5_eyebrow:"¡Gracias!", b5_title:"Has completado el cuestionario principal",
     b5_desc:"Tus respuestas ya tienen valor para el estudio. Si quieres, puedes continuar con bloques adicionales opcionales sobre el contexto de tu centro y, si haces investigación, sobre el uso de IA en tu trabajo académico. Cada bloque adicional son unos 5 minutos.",
     b5_notice:'Estos bloques son completamente opcionales. Puedes finalizar ahora pulsando "Enviar y finalizar".',
@@ -1883,6 +1908,10 @@ const I18N = {
     tr2_label:"Approximate hours of training in the last 2 years", tr2_none:"None", tr2_more:"More than 30",
     nsab:"I would not know how to answer this",
     sort_hint:"On mobile: tap a card, then tap the zone where you want to place it.",
+    howto_title:"How to answer",
+    howto_slider:"Sliders: drag the circle, or tap it and use the keyboard arrows on a computer.",
+    howto_vignette:"Vignettes: read the situation and move the slider according to how much concern it raises for you.",
+    howto_sort:"Cards: on a computer, drag them; on mobile, tap the card and then tap the zone where you want to place it.",
     b5_eyebrow:"Thank you!", b5_title:"You have completed the main questionnaire",
     b5_desc:"Your answers already have value for the study. If you'd like, you can continue with optional blocks about your school's context and, if you do research, about using AI in academic work. Each extra block takes about 5 minutes.",
     b5_notice:'These blocks are entirely optional. You can finish now by clicking "Submit and finish".',
@@ -1945,6 +1974,10 @@ const I18N = {
     tr2_label:"Heures approximatives de formation au cours des 2 dernières années", tr2_none:"Aucune", tr2_more:"Plus de 30",
     nsab:"Je ne saurais pas répondre à cela",
     sort_hint:"Sur mobile : touchez une carte, puis touchez la zone où la placer.",
+    howto_title:"Comment répondre",
+    howto_slider:"Curseurs : faites glisser le cercle, ou touchez-le et utilisez les flèches du clavier sur ordinateur.",
+    howto_vignette:"Vignettes : lisez la situation et déplacez le curseur selon le niveau d'inquiétude que cela vous procure.",
+    howto_sort:"Cartes : sur ordinateur, faites-les glisser ; sur mobile, touchez la carte puis touchez la zone où la placer.",
     b5_eyebrow:"Merci !", b5_title:"Vous avez terminé le questionnaire principal",
     b5_desc:"Vos réponses ont déjà de la valeur pour l'étude. Si vous le souhaitez, vous pouvez poursuivre avec des blocs facultatifs sur le contexte de votre établissement et, si vous faites de la recherche, sur l'utilisation de l'IA dans votre travail académique. Chaque bloc supplémentaire prend environ 5 minutes.",
     b5_notice:'Ces blocs sont entièrement facultatifs. Vous pouvez terminer maintenant en cliquant sur "Envoyer et terminer".',
@@ -2007,6 +2040,10 @@ const I18N = {
     tr2_label:"Ungefähre Schulungsstunden in den letzten 2 Jahren", tr2_none:"Keine", tr2_more:"Mehr als 30",
     nsab:"Ich wüsste nicht, wie ich das beantworten soll",
     sort_hint:"Auf dem Handy: Karte antippen, dann die gewünschte Zone antippen.",
+    howto_title:"Wie Sie antworten",
+    howto_slider:"Schieberegler: Ziehen Sie den Kreis, oder tippen Sie ihn an und nutzen Sie am Computer die Pfeiltasten.",
+    howto_vignette:"Szenarien: Lesen Sie die Situation und bewegen Sie den Regler entsprechend Ihrer Sorge.",
+    howto_sort:"Karten: am Computer ziehen; auf dem Handy die Karte antippen und dann die gewünschte Zone antippen.",
     b5_eyebrow:"Danke!", b5_title:"Sie haben den Hauptfragebogen abgeschlossen",
     b5_desc:"Ihre Antworten sind bereits wertvoll für die Studie. Wenn Sie möchten, können Sie mit optionalen Blöcken zum Kontext Ihrer Schule fortfahren und, falls Sie forschen, zur Nutzung von KI in der akademischen Arbeit. Jeder zusätzliche Block dauert etwa 5 Minuten.",
     b5_notice:'Diese Blöcke sind völlig optional. Sie können jetzt beenden, indem Sie auf "Absenden und beenden" klicken.',
@@ -2069,6 +2106,10 @@ const I18N = {
     tr2_label:"Ore approssimative di formazione negli ultimi 2 anni", tr2_none:"Nessuna", tr2_more:"Più di 30",
     nsab:"Non saprei come rispondere",
     sort_hint:"Su dispositivo mobile: tocca una carta, poi tocca la zona in cui posizionarla.",
+    howto_title:"Come rispondere",
+    howto_slider:"Cursori: trascina il cerchio, oppure toccalo e usa le freccette della tastiera sul computer.",
+    howto_vignette:"Vignette: leggi la situazione e sposta il cursore in base al livello di preoccupazione che ti genera.",
+    howto_sort:"Carte: sul computer trascinale; su mobile tocca la carta e poi tocca la zona in cui vuoi posizionarla.",
     b5_eyebrow:"Grazie!", b5_title:"Hai completato il questionario principale",
     b5_desc:"Le tue risposte hanno già valore per lo studio. Se vuoi, puoi continuare con blocchi facoltativi sul contesto della tua scuola e, se fai ricerca, sull'uso dell'IA nel tuo lavoro accademico. Ogni blocco aggiuntivo richiede circa 5 minuti.",
     b5_notice:'Questi blocchi sono completamente facoltativi. Puoi terminare ora cliccando su "Invia e termina".',
@@ -2131,6 +2172,10 @@ const I18N = {
     tr2_label:"Horas aproximadas de formação nos últimos 2 anos", tr2_none:"Nenhuma", tr2_more:"Mais de 30",
     nsab:"Não saberia responder a isto",
     sort_hint:"No telemóvel: toque num cartão e depois toque na zona onde o quer colocar.",
+    howto_title:"Como responder",
+    howto_slider:"Cursores: arraste o círculo, ou toque nele e use as setas do teclado no computador.",
+    howto_vignette:"Vinhetas: leia a situação e mova o cursor de acordo com o nível de preocupação que lhe causa.",
+    howto_sort:"Cartões: no computador, arraste-os; no telemóvel, toque no cartão e depois toque na zona onde o quer colocar.",
     b5_eyebrow:"Obrigado!", b5_title:"Concluiu o questionário principal",
     b5_desc:"As suas respostas já têm valor para o estudo. Se quiser, pode continuar com blocos opcionais sobre o contexto da sua escola e, se faz investigação, sobre o uso da IA no seu trabalho académico. Cada bloco extra demora cerca de 5 minutos.",
     b5_notice:'Estes blocos são totalmente opcionais. Pode terminar agora clicando em "Enviar e terminar".',
@@ -2193,6 +2238,10 @@ const I18N = {
     tr2_label:"Przybliżona liczba godzin szkolenia w ostatnich 2 latach", tr2_none:"Brak", tr2_more:"Więcej niż 30",
     nsab:"Nie wiedziałbym/abym jak na to odpowiedzieć",
     sort_hint:"Na telefonie: dotknij karty, a potem dotknij strefy, w której chcesz ją umieścić.",
+    howto_title:"Jak odpowiadać",
+    howto_slider:"Przesuwniki: przeciągnij kółko lub dotknij go i użyj strzałek klawiatury na komputerze.",
+    howto_vignette:"Winiety: przeczytaj sytuację i przesuń przesuwnik zgodnie z poziomem niepokoju, jaki wywołuje.",
+    howto_sort:"Karty: na komputerze przeciągnij je; na telefonie dotknij karty, a potem dotknij strefy, w której chcesz ją umieścić.",
     b5_eyebrow:"Dziękujemy!", b5_title:"Zakończyłeś/aś główny kwestionariusz",
     b5_desc:"Twoje odpowiedzi już mają wartość dla badania. Jeśli chcesz, możesz kontynuować z opcjonalnymi blokami dotyczącymi kontekstu Twojej szkoły oraz, jeśli prowadzisz badania, dotyczącymi wykorzystania AI w pracy akademickiej. Każdy dodatkowy blok zajmuje około 5 minut.",
     b5_notice:'Te bloki są całkowicie opcjonalne. Możesz zakończyć teraz, klikając "Wyślij i zakończ".',
@@ -2255,6 +2304,10 @@ const I18N = {
     tr2_label:"Geschatte uren training in de afgelopen 2 jaar", tr2_none:"Geen", tr2_more:"Meer dan 30",
     nsab:"Ik zou dit niet kunnen beantwoorden",
     sort_hint:"Op mobiel: tik op een kaart en tik daarna op de zone waar u die wilt plaatsen.",
+    howto_title:"Hoe te antwoorden",
+    howto_slider:"Schuifregelaars: sleep de cirkel, of tik erop en gebruik op de computer de pijltjestoetsen.",
+    howto_vignette:"Vignetten: lees de situatie en verplaats de schuifregelaar volgens de mate van bezorgdheid die het oproept.",
+    howto_sort:"Kaarten: sleep ze op de computer; op mobiel tikt u op de kaart en daarna op de zone waar u die wilt plaatsen.",
     b5_eyebrow:"Dank u!", b5_title:"U heeft de hoofdvragenlijst voltooid",
     b5_desc:"Uw antwoorden hebben al waarde voor het onderzoek. Als u wilt, kunt u doorgaan met optionele blokken over de context van uw school en, als u onderzoek doet, over het gebruik van AI in academisch werk. Elk extra blok duurt ongeveer 5 minuten.",
     b5_notice:'Deze blokken zijn volledig optioneel. U kunt nu afronden door op "Verzenden en afronden" te klikken.',
