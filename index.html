@@ -2916,9 +2916,34 @@ function updateProgress(){
 
 function showStep(step){
   document.querySelectorAll('.block').forEach(b => b.classList.remove('active'));
-  document.querySelector(`.block[data-step="${step}"]`).classList.add('active');
+  const block = document.querySelector(`.block[data-step="${step}"]`);
+  block.classList.add('active');
   currentStep = step;
   updateProgress();
+
+  // Inject audio button into block-head (steps 1-11) if not already there
+  if(step >= 1 && step <= 11){
+    const head = block.querySelector('.block-head');
+    if(head && !head.querySelector('.block-speak-btn')){
+      const btn = document.createElement('button');
+      btn.className = 'speak-btn block-speak-btn';
+      btn.setAttribute('aria-label','audio');
+      btn.innerHTML = '🔊';
+      btn.style.marginTop = '8px';
+      btn.onclick = () => {
+        const eyebrow = head.querySelector('[data-i18n$="_eyebrow"]');
+        const title = head.querySelector('[data-i18n$="_title"]');
+        const desc = head.querySelector('[data-i18n$="_desc"]');
+        const parts = [eyebrow, title, desc].filter(Boolean).map(el => el.textContent.trim());
+        // Also read the scale anchors if present on this step
+        const legend = block.querySelector('.scale-legend');
+        if(legend) parts.push(legend.textContent.replace(/\s+/g,' ').trim());
+        speak(parts.join('. '), currentLang, btn);
+      };
+      head.appendChild(btn);
+    }
+  }
+
   window.scrollTo({top:0, behavior:'smooth'});
 }
 
