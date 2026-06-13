@@ -204,7 +204,10 @@
   <!-- STEP 0: CONSENT -->
   <section class="block active" data-step="0">
     <div class="consent-box">
-      <h1 data-i18n="welcome_title">Bienvenido/a a Teacher AID</h1>
+      <div style="display:flex; align-items:flex-start; justify-content:center; gap:10px;">
+        <h1 data-i18n="welcome_title" style="margin:0">Bienvenido/a a Teacher AID</h1>
+        <button class="speak-btn" id="welcomePageSpeakBtn" aria-label="audio" style="margin-top:4px; flex-shrink:0">🔊</button>
+      </div>
       <div class="consent-sub" data-i18n="welcome_sub">El coste humano y académico de la IA en la educación europea</div>
       <p class="consent-text" data-i18n="welcome_p1">
         Este cuestionario explora cómo afecta la inteligencia artificial al bienestar profesional del profesorado en la Unión Europea.
@@ -2935,9 +2938,23 @@ function showStep(step){
         const title = head.querySelector('[data-i18n$="_title"]');
         const desc = head.querySelector('[data-i18n$="_desc"]');
         const parts = [eyebrow, title, desc].filter(Boolean).map(el => el.textContent.trim());
-        // Also read the scale anchors if present on this step
+        // Also read the scale anchors if present
         const legend = block.querySelector('.scale-legend');
         if(legend) parts.push(legend.textContent.replace(/\s+/g,' ').trim());
+        // Step-specific extra text (sorting instructions, filter question, training labels)
+        const extras = [
+          block.querySelector('.sorting-title'),
+          block.querySelector('.sorting-instr'),
+          block.querySelector('.sort-hint'),
+          block.querySelector('[data-i18n="tr1_label"]'),
+          block.querySelector('[data-i18n="tr2_label"]'),
+          block.querySelector('[data-i18n="inv1_label"]'),
+          block.querySelector('[data-i18n="b5_desc"]'),
+        ];
+        extras.filter(Boolean).forEach(el => {
+          const t = el.textContent.trim();
+          if(t) parts.push(t);
+        });
         speak(parts.join('. '), currentLang, btn);
       };
       head.appendChild(btn);
@@ -3100,6 +3117,12 @@ document.getElementById('submitFinalBtn').addEventListener('click', () => {
 // init
 applyTranslations();
 renderAll();
+
+// Welcome page main audio: title + subtitle + both paragraphs
+document.getElementById('welcomePageSpeakBtn').addEventListener('click', () => {
+  const text = [T('welcome_title'), T('welcome_sub'), T('welcome_p1'), T('welcome_p2')].join('. ');
+  speak(text, currentLang, document.getElementById('welcomePageSpeakBtn'));
+});
 
 // Welcome screen audio: consent + how-to-respond
 document.getElementById('welcomeSpeakBtn').addEventListener('click', () => {
