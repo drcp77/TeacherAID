@@ -305,14 +305,6 @@
       </select>
     </div>
 
-    <div class="card">
-      <label class="q-label" data-i18n="domain_label">Dominio de tu correo institucional (no tu email completo)</label>
-      <input class="text-input" id="domainInput" placeholder="ej. urjc.es" data-i18n-ph="domain_ph">
-      <div class="definition" style="margin-top:8px" data-i18n="domain_note">
-        Esto no es un dato personal (RGPD art. 4). Se usa solo para confirmar que respondes desde un correo de una institución educativa. Nunca pedimos tu email completo.
-      </div>
-    </div>
-
     <div class="nav-row">
       <button class="btn btn-ghost" data-prev data-i18n="back">← Atrás</button>
       <button class="btn btn-primary" data-next data-i18n="continue">Continuar →</button>
@@ -1812,7 +1804,7 @@ const I18N = {
     welcome_title:"Bienvenido/a a Teacher AID",
     welcome_sub:"El coste humano y académico de la IA en la educación europea",
     welcome_p1:"Este cuestionario explora cómo afecta la inteligencia artificial al bienestar profesional del profesorado en la Unión Europea. Tiene tres bloques: el primero es obligatorio (unos 5 minutos) y los otros dos son opcionales (5 minutos cada uno). Puedes terminar después de cualquier bloque.",
-    welcome_p2:"Tu participación es informada, voluntaria y anónima. No se recoge tu nombre ni tu email completo. Solo se pedirá el dominio de tu correo institucional (por ejemplo, urjc.es), que no es un dato personal según el RGPD.",
+    welcome_p2:"Tu participación es informada, voluntaria y anónima. No se recoge tu nombre ni tu email.",
     welcome_links:'Más información: <a href="#" target="_blank">Hoja de Información al Participante</a> · <a href="#" target="_blank">Memoria del proyecto</a>',
     welcome_check:"Confirmo que soy docente en activo en un centro educativo, que he leído la Hoja de Información, y que mi participación es informada, voluntaria y anónima.",
     welcome_start:"Empezar →",
@@ -1846,6 +1838,12 @@ const I18N = {
     howto_slider:"Deslizadores: arrastra el círculo, o tócalo y usa las flechas del teclado en ordenador.",
     howto_vignette:"Viñetas: lee la situación y mueve el deslizador según el nivel de inquietud que te genere.",
     howto_sort:"Tarjetas: en ordenador, arrástralas; en móvil, toca la tarjeta y luego toca la zona donde quieras colocarla.",
+    sum_c1:"Tu inquietud ante cada situación",
+    sum_c2:"Cuestionario 2: contexto institucional",
+    sum_c2_climate:"Clima institucional percibido ante la IA",
+    sum_c3:"Cuestionario 3: investigación y IA",
+    sum_c3_concern:"Preocupación media en tareas de investigación",
+    sum_c3_count:"Marcaste preocupación en {n} de 13 tareas.",
     b5_eyebrow:"¡Gracias!", b5_title:"Has completado el cuestionario principal",
     b5_desc:"Tus respuestas ya tienen valor para el estudio. Si quieres, puedes continuar con bloques adicionales opcionales sobre el contexto de tu centro y, si haces investigación, sobre el uso de IA en tu trabajo académico. Cada bloque adicional son unos 5 minutos.",
     b5_notice:'Estos bloques son completamente opcionales. Puedes finalizar ahora pulsando "Enviar y finalizar".',
@@ -1878,7 +1876,7 @@ const I18N = {
     welcome_title:"Welcome to Teacher AID",
     welcome_sub:"The human and academic cost of AI in European education",
     welcome_p1:"This questionnaire explores how artificial intelligence affects teachers' professional wellbeing across the European Union. It has three blocks: the first is required (about 5 minutes), and the other two are optional (5 minutes each). You can finish after any block.",
-    welcome_p2:"Your participation is informed, voluntary and anonymous. We do not collect your name or full email. We only ask for your institutional email domain (e.g. urjc.es), which is not personal data under GDPR.",
+    welcome_p2:"Your participation is informed, voluntary and anonymous. We do not collect your name or email.",
     welcome_links:'More information: <a href="#" target="_blank">Participant Information Sheet</a> · <a href="#" target="_blank">Project Memoria</a>',
     welcome_check:"I confirm that I am an active teacher at an educational institution, that I have read the Information Sheet, and that my participation is informed, voluntary and anonymous.",
     welcome_start:"Start →",
@@ -1912,6 +1910,12 @@ const I18N = {
     howto_slider:"Sliders: drag the circle, or tap it and use the keyboard arrows on a computer.",
     howto_vignette:"Vignettes: read the situation and move the slider according to how much concern it raises for you.",
     howto_sort:"Cards: on a computer, drag them; on mobile, tap the card and then tap the zone where you want to place it.",
+    sum_c1:"Your concern about each situation",
+    sum_c2:"Questionnaire 2: institutional context",
+    sum_c2_climate:"Perceived institutional climate towards AI",
+    sum_c3:"Questionnaire 3: research and AI",
+    sum_c3_concern:"Average concern across research tasks",
+    sum_c3_count:"You flagged concern in {n} of 13 tasks.",
     b5_eyebrow:"Thank you!", b5_title:"You have completed the main questionnaire",
     b5_desc:"Your answers already have value for the study. If you'd like, you can continue with optional blocks about your school's context and, if you do research, about using AI in academic work. Each extra block takes about 5 minutes.",
     b5_notice:'These blocks are entirely optional. You can finish now by clicking "Submit and finish".',
@@ -1944,7 +1948,7 @@ const I18N = {
     welcome_title:"Bienvenue sur Teacher AID",
     welcome_sub:"Le coût humain et académique de l'IA dans l'éducation européenne",
     welcome_p1:"Ce questionnaire explore comment l'intelligence artificielle affecte le bien-être professionnel des enseignants dans l'Union européenne. Il comporte trois blocs : le premier est obligatoire (environ 5 minutes) et les deux autres sont facultatifs (5 minutes chacun). Vous pouvez terminer après n'importe quel bloc.",
-    welcome_p2:"Votre participation est informée, volontaire et anonyme. Nous ne recueillons ni votre nom ni votre email complet. Nous demandons uniquement le domaine de votre email institutionnel (ex. urjc.es), qui n'est pas une donnée personnelle selon le RGPD.",
+    welcome_p2:"Votre participation est informée, volontaire et anonyme. Nous ne recueillons ni votre nom ni votre email.",
     welcome_links:"Plus d'informations : <a href=\"#\" target=\"_blank\">Fiche d'information aux participants</a> · <a href=\"#\" target=\"_blank\">Mémoire du projet</a>",
     welcome_check:"Je confirme être enseignant(e) en activité dans un établissement éducatif, avoir lu la fiche d'information, et que ma participation est informée, volontaire et anonyme.",
     welcome_start:"Commencer →",
@@ -1978,6 +1982,12 @@ const I18N = {
     howto_slider:"Curseurs : faites glisser le cercle, ou touchez-le et utilisez les flèches du clavier sur ordinateur.",
     howto_vignette:"Vignettes : lisez la situation et déplacez le curseur selon le niveau d'inquiétude que cela vous procure.",
     howto_sort:"Cartes : sur ordinateur, faites-les glisser ; sur mobile, touchez la carte puis touchez la zone où la placer.",
+    sum_c1:"Votre inquiétude face à chaque situation",
+    sum_c2:"Questionnaire 2 : contexte institutionnel",
+    sum_c2_climate:"Climat institutionnel perçu face à l'IA",
+    sum_c3:"Questionnaire 3 : recherche et IA",
+    sum_c3_concern:"Préoccupation moyenne pour les tâches de recherche",
+    sum_c3_count:"Vous avez signalé une préoccupation pour {n} tâches sur 13.",
     b5_eyebrow:"Merci !", b5_title:"Vous avez terminé le questionnaire principal",
     b5_desc:"Vos réponses ont déjà de la valeur pour l'étude. Si vous le souhaitez, vous pouvez poursuivre avec des blocs facultatifs sur le contexte de votre établissement et, si vous faites de la recherche, sur l'utilisation de l'IA dans votre travail académique. Chaque bloc supplémentaire prend environ 5 minutes.",
     b5_notice:'Ces blocs sont entièrement facultatifs. Vous pouvez terminer maintenant en cliquant sur "Envoyer et terminer".',
@@ -2010,7 +2020,7 @@ const I18N = {
     welcome_title:"Willkommen bei Teacher AID",
     welcome_sub:"Die menschlichen und akademischen Kosten von KI in der europäischen Bildung",
     welcome_p1:"Dieser Fragebogen untersucht, wie künstliche Intelligenz das berufliche Wohlbefinden von Lehrkräften in der Europäischen Union beeinflusst. Er besteht aus drei Blöcken: der erste ist obligatorisch (etwa 5 Minuten), die anderen beiden sind optional (je 5 Minuten). Sie können nach jedem Block beenden.",
-    welcome_p2:"Ihre Teilnahme ist informiert, freiwillig und anonym. Wir erfassen weder Ihren Namen noch Ihre vollständige E-Mail-Adresse. Wir fragen nur nach der Domain Ihrer institutionellen E-Mail (z.B. urjc.es), die laut DSGVO kein personenbezogenes Datum ist.",
+    welcome_p2:"Ihre Teilnahme ist informiert, freiwillig und anonym. Wir erfassen weder Ihren Namen noch Ihre E-Mail-Adresse.",
     welcome_links:'Weitere Informationen: <a href="#" target="_blank">Teilnehmerinformationsblatt</a> · <a href="#" target="_blank">Projektmemorandum</a>',
     welcome_check:"Ich bestätige, dass ich als aktive Lehrkraft an einer Bildungseinrichtung tätig bin, das Informationsblatt gelesen habe und meine Teilnahme informiert, freiwillig und anonym ist.",
     welcome_start:"Beginnen →",
@@ -2044,6 +2054,12 @@ const I18N = {
     howto_slider:"Schieberegler: Ziehen Sie den Kreis, oder tippen Sie ihn an und nutzen Sie am Computer die Pfeiltasten.",
     howto_vignette:"Szenarien: Lesen Sie die Situation und bewegen Sie den Regler entsprechend Ihrer Sorge.",
     howto_sort:"Karten: am Computer ziehen; auf dem Handy die Karte antippen und dann die gewünschte Zone antippen.",
+    sum_c1:"Ihre Sorge bei jeder Situation",
+    sum_c2:"Fragebogen 2: institutioneller Kontext",
+    sum_c2_climate:"Wahrgenommenes institutionelles Klima gegenüber KI",
+    sum_c3:"Fragebogen 3: Forschung und KI",
+    sum_c3_concern:"Durchschnittliche Sorge bei Forschungsaufgaben",
+    sum_c3_count:"Sie haben bei {n} von 13 Aufgaben Sorge angegeben.",
     b5_eyebrow:"Danke!", b5_title:"Sie haben den Hauptfragebogen abgeschlossen",
     b5_desc:"Ihre Antworten sind bereits wertvoll für die Studie. Wenn Sie möchten, können Sie mit optionalen Blöcken zum Kontext Ihrer Schule fortfahren und, falls Sie forschen, zur Nutzung von KI in der akademischen Arbeit. Jeder zusätzliche Block dauert etwa 5 Minuten.",
     b5_notice:'Diese Blöcke sind völlig optional. Sie können jetzt beenden, indem Sie auf "Absenden und beenden" klicken.',
@@ -2076,7 +2092,7 @@ const I18N = {
     welcome_title:"Benvenuto/a su Teacher AID",
     welcome_sub:"Il costo umano e accademico dell'IA nell'istruzione europea",
     welcome_p1:"Questo questionario esplora come l'intelligenza artificiale influisce sul benessere professionale degli insegnanti nell'Unione Europea. Ha tre blocchi: il primo è obbligatorio (circa 5 minuti) e gli altri due sono facoltativi (5 minuti ciascuno). Puoi terminare dopo qualsiasi blocco.",
-    welcome_p2:"La tua partecipazione è informata, volontaria e anonima. Non raccogliamo il tuo nome né la tua email completa. Chiediamo solo il dominio della tua email istituzionale (es. urjc.es), che non è un dato personale secondo il GDPR.",
+    welcome_p2:"La tua partecipazione è informata, volontaria e anonima. Non raccogliamo il tuo nome né la tua email.",
     welcome_links:'Maggiori informazioni: <a href="#" target="_blank">Scheda informativa per i partecipanti</a> · <a href="#" target="_blank">Memoria del progetto</a>',
     welcome_check:"Confermo di essere un/una insegnante in attività in un istituto scolastico, di aver letto la scheda informativa, e che la mia partecipazione è informata, volontaria e anonima.",
     welcome_start:"Inizia →",
@@ -2110,6 +2126,12 @@ const I18N = {
     howto_slider:"Cursori: trascina il cerchio, oppure toccalo e usa le freccette della tastiera sul computer.",
     howto_vignette:"Vignette: leggi la situazione e sposta il cursore in base al livello di preoccupazione che ti genera.",
     howto_sort:"Carte: sul computer trascinale; su mobile tocca la carta e poi tocca la zona in cui vuoi posizionarla.",
+    sum_c1:"La tua preoccupazione per ogni situazione",
+    sum_c2:"Questionario 2: contesto istituzionale",
+    sum_c2_climate:"Clima istituzionale percepito verso l'IA",
+    sum_c3:"Questionario 3: ricerca e IA",
+    sum_c3_concern:"Preoccupazione media nelle attività di ricerca",
+    sum_c3_count:"Hai segnalato preoccupazione in {n} attività su 13.",
     b5_eyebrow:"Grazie!", b5_title:"Hai completato il questionario principale",
     b5_desc:"Le tue risposte hanno già valore per lo studio. Se vuoi, puoi continuare con blocchi facoltativi sul contesto della tua scuola e, se fai ricerca, sull'uso dell'IA nel tuo lavoro accademico. Ogni blocco aggiuntivo richiede circa 5 minuti.",
     b5_notice:'Questi blocchi sono completamente facoltativi. Puoi terminare ora cliccando su "Invia e termina".',
@@ -2142,7 +2164,7 @@ const I18N = {
     welcome_title:"Bem-vindo/a ao Teacher AID",
     welcome_sub:"O custo humano e académico da IA na educação europeia",
     welcome_p1:"Este questionário explora como a inteligência artificial afeta o bem-estar profissional dos professores na União Europeia. Tem três blocos: o primeiro é obrigatório (cerca de 5 minutos) e os outros dois são opcionais (5 minutos cada). Pode terminar após qualquer bloco.",
-    welcome_p2:"A sua participação é informada, voluntária e anónima. Não recolhemos o seu nome nem o seu email completo. Apenas pedimos o domínio do seu email institucional (ex. urjc.es), que não é um dado pessoal segundo o RGPD.",
+    welcome_p2:"A sua participação é informada, voluntária e anónima. Não recolhemos o seu nome nem o seu email.",
     welcome_links:'Mais informações: <a href="#" target="_blank">Folha de Informação ao Participante</a> · <a href="#" target="_blank">Memória do projeto</a>',
     welcome_check:"Confirmo que sou professor/a em atividade numa instituição de ensino, que li a Folha de Informação, e que a minha participação é informada, voluntária e anónima.",
     welcome_start:"Começar →",
@@ -2176,6 +2198,12 @@ const I18N = {
     howto_slider:"Cursores: arraste o círculo, ou toque nele e use as setas do teclado no computador.",
     howto_vignette:"Vinhetas: leia a situação e mova o cursor de acordo com o nível de preocupação que lhe causa.",
     howto_sort:"Cartões: no computador, arraste-os; no telemóvel, toque no cartão e depois toque na zona onde o quer colocar.",
+    sum_c1:"A sua preocupação com cada situação",
+    sum_c2:"Questionário 2: contexto institucional",
+    sum_c2_climate:"Clima institucional percebido face à IA",
+    sum_c3:"Questionário 3: investigação e IA",
+    sum_c3_concern:"Preocupação média nas tarefas de investigação",
+    sum_c3_count:"Indicou preocupação em {n} de 13 tarefas.",
     b5_eyebrow:"Obrigado!", b5_title:"Concluiu o questionário principal",
     b5_desc:"As suas respostas já têm valor para o estudo. Se quiser, pode continuar com blocos opcionais sobre o contexto da sua escola e, se faz investigação, sobre o uso da IA no seu trabalho académico. Cada bloco extra demora cerca de 5 minutos.",
     b5_notice:'Estes blocos são totalmente opcionais. Pode terminar agora clicando em "Enviar e terminar".',
@@ -2208,7 +2236,7 @@ const I18N = {
     welcome_title:"Witamy w Teacher AID",
     welcome_sub:"Ludzki i akademicki koszt AI w europejskiej edukacji",
     welcome_p1:"Ten kwestionariusz bada, jak sztuczna inteligencja wpływa na dobrostan zawodowy nauczycieli w Unii Europejskiej. Składa się z trzech bloków: pierwszy jest wymagany (około 5 minut), a dwa kolejne są opcjonalne (po 5 minut). Możesz zakończyć po każdym bloku.",
-    welcome_p2:"Twój udział jest świadomy, dobrowolny i anonimowy. Nie zbieramy Twojego imienia ani pełnego adresu e-mail. Prosimy tylko o domenę Twojego instytucjonalnego adresu e-mail (np. urjc.es), która nie jest danymi osobowymi według RODO.",
+    welcome_p2:"Twój udział jest świadomy, dobrowolny i anonimowy. Nie zbieramy Twojego imienia ani adresu e-mail.",
     welcome_links:'Więcej informacji: <a href="#" target="_blank">Arkusz informacyjny dla uczestnika</a> · <a href="#" target="_blank">Memorandum projektu</a>',
     welcome_check:"Potwierdzam, że jestem aktywnym nauczycielem/nauczycielką w placówce edukacyjnej, przeczytałem/am arkusz informacyjny, a mój udział jest świadomy, dobrowolny i anonimowy.",
     welcome_start:"Zacznij →",
@@ -2242,6 +2270,12 @@ const I18N = {
     howto_slider:"Przesuwniki: przeciągnij kółko lub dotknij go i użyj strzałek klawiatury na komputerze.",
     howto_vignette:"Winiety: przeczytaj sytuację i przesuń przesuwnik zgodnie z poziomem niepokoju, jaki wywołuje.",
     howto_sort:"Karty: na komputerze przeciągnij je; na telefonie dotknij karty, a potem dotknij strefy, w której chcesz ją umieścić.",
+    sum_c1:"Twój niepokój wobec każdej sytuacji",
+    sum_c2:"Kwestionariusz 2: kontekst instytucjonalny",
+    sum_c2_climate:"Postrzegany klimat instytucjonalny wobec AI",
+    sum_c3:"Kwestionariusz 3: badania i AI",
+    sum_c3_concern:"Średni niepokój w zadaniach badawczych",
+    sum_c3_count:"Zaznaczyłeś/aś niepokój w {n} z 13 zadań.",
     b5_eyebrow:"Dziękujemy!", b5_title:"Zakończyłeś/aś główny kwestionariusz",
     b5_desc:"Twoje odpowiedzi już mają wartość dla badania. Jeśli chcesz, możesz kontynuować z opcjonalnymi blokami dotyczącymi kontekstu Twojej szkoły oraz, jeśli prowadzisz badania, dotyczącymi wykorzystania AI w pracy akademickiej. Każdy dodatkowy blok zajmuje około 5 minut.",
     b5_notice:'Te bloki są całkowicie opcjonalne. Możesz zakończyć teraz, klikając "Wyślij i zakończ".',
@@ -2274,7 +2308,7 @@ const I18N = {
     welcome_title:"Welkom bij Teacher AID",
     welcome_sub:"De menselijke en academische kosten van AI in het Europese onderwijs",
     welcome_p1:"Deze vragenlijst onderzoekt hoe kunstmatige intelligentie het professionele welzijn van leraren in de Europese Unie beïnvloedt. Er zijn drie blokken: het eerste is verplicht (ongeveer 5 minuten) en de andere twee zijn optioneel (5 minuten elk). U kunt na elk blok afronden.",
-    welcome_p2:"Uw deelname is geïnformeerd, vrijwillig en anoniem. We verzamelen niet uw naam of volledige e-mailadres. We vragen alleen het domein van uw institutionele e-mail (bijv. urjc.es), wat volgens de AVG geen persoonsgegeven is.",
+    welcome_p2:"Uw deelname is geïnformeerd, vrijwillig en anoniem. We verzamelen niet uw naam of e-mailadres.",
     welcome_links:'Meer informatie: <a href="#" target="_blank">Informatieblad voor deelnemers</a> · <a href="#" target="_blank">Projectmemorandum</a>',
     welcome_check:"Ik bevestig dat ik een actieve leraar/lerares ben op een onderwijsinstelling, dat ik het informatieblad heb gelezen, en dat mijn deelname geïnformeerd, vrijwillig en anoniem is.",
     welcome_start:"Beginnen →",
@@ -2308,6 +2342,12 @@ const I18N = {
     howto_slider:"Schuifregelaars: sleep de cirkel, of tik erop en gebruik op de computer de pijltjestoetsen.",
     howto_vignette:"Vignetten: lees de situatie en verplaats de schuifregelaar volgens de mate van bezorgdheid die het oproept.",
     howto_sort:"Kaarten: sleep ze op de computer; op mobiel tikt u op de kaart en daarna op de zone waar u die wilt plaatsen.",
+    sum_c1:"Uw bezorgdheid over elke situatie",
+    sum_c2:"Vragenlijst 2: institutionele context",
+    sum_c2_climate:"Ervaren institutioneel klimaat ten opzichte van AI",
+    sum_c3:"Vragenlijst 3: onderzoek en AI",
+    sum_c3_concern:"Gemiddelde bezorgdheid over onderzoekstaken",
+    sum_c3_count:"U gaf bezorgdheid aan bij {n} van de 13 taken.",
     b5_eyebrow:"Dank u!", b5_title:"U heeft de hoofdvragenlijst voltooid",
     b5_desc:"Uw antwoorden hebben al waarde voor het onderzoek. Als u wilt, kunt u doorgaan met optionele blokken over de context van uw school en, als u onderzoek doet, over het gebruik van AI in academisch werk. Elk extra blok duurt ongeveer 5 minuten.",
     b5_notice:'Deze blokken zijn volledig optioneel. U kunt nu afronden door op "Verzenden en afronden" te klikken.',
@@ -2343,7 +2383,7 @@ const I18N = {
    ============================================================ */
 let currentLang = 'es';
 let currentStep = 0;
-const totalSteps = 12; // 0..12
+let totalSteps = 6; // dynamic: 6 (C1 only), 9 (C1+C2), or 12 (C1+C2+C3)
 const responses = {}; // id -> {value, nsab}
 
 // Fallback helper: returns dataset[lang] if it exists, else dataset['en'], else dataset['es']
@@ -2866,9 +2906,14 @@ function applyTranslations(){
 }
 
 function updateProgress(){
-  const pct = Math.round((currentStep/totalSteps)*100);
+  // Map the absolute step index to a "display step" within the current path,
+  // so the counter never shows a number higher than the path's total.
+  let displayStep = currentStep;
+  if(totalSteps === 12 && currentStep === 12) displayStep = 12; // full path, thank-you = 12
+  else if(currentStep > totalSteps) displayStep = totalSteps; // safety clamp
+  const pct = Math.round((displayStep/totalSteps)*100);
   document.getElementById('progressFill').style.width = pct+'%';
-  document.getElementById('progressLabel').textContent = `${T('progress')} ${currentStep} ${T('of')} ${totalSteps} — ${T('step_names')[currentStep]}`;
+  document.getElementById('progressLabel').textContent = `${T('progress')} ${displayStep} ${T('of')} ${totalSteps} — ${T('step_names')[currentStep]}`;
 }
 
 function showStep(step){
@@ -2885,26 +2930,72 @@ function showStep(step){
 function renderProfile(){
   const container = document.getElementById('profileResults');
   container.innerHTML = '';
-  const items = D(VIGNETTES).map((v,i) => ({
+  let any = false;
+
+  const sectionTitle = (text) => {
+    const h = document.createElement('div');
+    h.style.fontSize = '12px'; h.style.fontWeight = '800'; h.style.color = 'var(--navy)';
+    h.style.textTransform = 'uppercase'; h.style.letterSpacing = '.06em';
+    h.style.margin = '18px 0 8px';
+    h.textContent = text;
+    container.appendChild(h);
+  };
+  const bar = (label, val) => {
+    const lvl = getLevel(val);
+    const row = document.createElement('div');
+    row.className = 'result-row';
+    row.innerHTML = `
+      <span class="result-label">${label}</span>
+      <div class="result-bar-w"><div class="result-bar" style="width:${val}%;background:${ANCHOR_COLORS[lvl]}"></div></div>
+      <span class="result-val">${Math.round(val)}%</span>
+    `;
+    container.appendChild(row);
+  };
+
+  // --- C1: vignettes ---
+  const vigItems = D(VIGNETTES).map((v) => ({
     label: v.title,
     val: (responses[v.id] && !responses[v.id].nsab) ? responses[v.id].value : null
   })).filter(x => x.val !== null).sort((a,b)=>b.val-a.val);
 
-  if(items.length===0){
-    container.innerHTML = `<p style="text-align:center;color:var(--grey-light);font-size:13px">—</p>`;
-    return;
+  if(vigItems.length>0){
+    any = true;
+    sectionTitle(T('sum_c1'));
+    vigItems.forEach(it => bar(it.label, it.val));
   }
-  items.forEach(it => {
-    const lvl = getLevel(it.val);
-    const row = document.createElement('div');
-    row.className = 'result-row';
-    row.innerHTML = `
-      <span class="result-label">${it.label}</span>
-      <div class="result-bar-w"><div class="result-bar" style="width:${it.val}%;background:${ANCHOR_COLORS[lvl]}"></div></div>
-      <span class="result-val">${it.val}%</span>
-    `;
-    container.appendChild(row);
-  });
+
+  // --- C2: institutional climate (PI3, PI5, PI6) ---
+  const c2ids = ['PI3','PI5','PI6'];
+  const c2vals = c2ids.map(id => (responses[id] && !responses[id].nsab) ? responses[id].value : null).filter(v=>v!==null);
+  if(c2vals.length>0){
+    any = true;
+    sectionTitle(T('sum_c2'));
+    const avg = c2vals.reduce((a,b)=>a+b,0)/c2vals.length;
+    bar(T('sum_c2_climate'), avg);
+  }
+
+  // --- C3: research concern ---
+  if(responses['INV1'] && responses['INV1'].value === 'yes'){
+    const intensities = [];
+    for(let i=1;i<=13;i++){
+      const key = `TAREA${i}_INTENSITY`;
+      if(responses[key] && !responses[key].nsab) intensities.push(responses[key].value);
+    }
+    if(intensities.length>0){
+      any = true;
+      sectionTitle(T('sum_c3'));
+      const avg = intensities.reduce((a,b)=>a+b,0)/intensities.length;
+      bar(T('sum_c3_concern'), avg);
+      const note = document.createElement('p');
+      note.style.fontSize = '12px'; note.style.color = 'var(--grey-light)'; note.style.marginTop = '6px';
+      note.textContent = T('sum_c3_count').replace('{n}', intensities.length);
+      container.appendChild(note);
+    }
+  }
+
+  if(!any){
+    container.innerHTML = `<p style="text-align:center;color:var(--grey-light);font-size:13px">—</p>`;
+  }
 }
 
 /* ============================================================
@@ -2956,7 +3047,7 @@ document.getElementById('submitNowBtn').addEventListener('click', () => {
   renderProfile();
   showStep(12);
 });
-document.getElementById('continueOptionalBtn').addEventListener('click', () => showStep(6));
+document.getElementById('continueOptionalBtn').addEventListener('click', () => { totalSteps = 9; showStep(6); });
 
 // Step 8 (end of C2 -> submit or continue to C3)
 document.getElementById('submitAfterC2Btn').addEventListener('click', () => {
@@ -2982,6 +3073,7 @@ document.getElementById('inv1NextBtn').addEventListener('click', () => {
     renderProfile();
     showStep(12);
   } else {
+    totalSteps = 12;
     showStep(10);
   }
 });
