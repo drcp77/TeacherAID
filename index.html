@@ -269,6 +269,19 @@
     </div>
 
     <div class="card">
+      <label class="q-label" data-i18n="d_age_label">Tu rango de edad</label>
+      <select id="dAge">
+        <option value="" data-i18n="select_placeholder">Selecciona...</option>
+        <option data-i18n="d_age_1">Menos de 25</option>
+        <option data-i18n="d_age_2">25-34</option>
+        <option data-i18n="d_age_3">35-44</option>
+        <option data-i18n="d_age_4">45-54</option>
+        <option data-i18n="d_age_5">55-64</option>
+        <option data-i18n="d_age_6">65 o más</option>
+      </select>
+    </div>
+
+    <div class="card">
       <label class="q-label" data-i18n="d2_label">Etapa educativa en la que trabajas</label>
       <select id="d2">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
@@ -1813,6 +1826,8 @@ const I18N = {
     b1_eyebrow:"Bloque 1 de 3", b1_title:"Quién eres", b1_desc:"Unas preguntas rápidas de contexto. Aproximadamente 1 minuto.",
     select_placeholder:"Selecciona...", other_country:"Otro país de la UE",
     d1_label:"País en el que trabajas actualmente",
+    d_age_label:"Tu rango de edad",
+    d_age_1:"Menos de 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 o más",
     d2_label:"Etapa educativa en la que trabajas",
     d2_infantil:"Infantil", d2_primaria:"Primaria", d2_secundaria:"Secundaria", d2_bachillerato:"Bachillerato", d2_fp:"Formación Profesional", d2_superior:"Educación Superior", d2_otra:"Otra",
     d3_label:"Años de experiencia docente", d3_more:"Más de 20",
@@ -1885,6 +1900,8 @@ const I18N = {
     b1_eyebrow:"Block 1 of 3", b1_title:"Who you are", b1_desc:"A few quick context questions. About 1 minute.",
     select_placeholder:"Select...", other_country:"Other EU country",
     d1_label:"Country where you currently work",
+    d_age_label:"Your age range",
+    d_age_1:"Under 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 or older",
     d2_label:"Educational stage where you work",
     d2_infantil:"Early childhood", d2_primaria:"Primary", d2_secundaria:"Secondary", d2_bachillerato:"Upper secondary", d2_fp:"Vocational training", d2_superior:"Higher education", d2_otra:"Other",
     d3_label:"Years of teaching experience", d3_more:"More than 20",
@@ -1957,6 +1974,8 @@ const I18N = {
     b1_eyebrow:"Bloc 1 sur 3", b1_title:"Qui êtes-vous", b1_desc:"Quelques questions rapides de contexte. Environ 1 minute.",
     select_placeholder:"Sélectionnez...", other_country:"Autre pays de l'UE",
     d1_label:"Pays où vous travaillez actuellement",
+    d_age_label:"Votre tranche d'âge",
+    d_age_1:"Moins de 25 ans", d_age_2:"25-34 ans", d_age_3:"35-44 ans", d_age_4:"45-54 ans", d_age_5:"55-64 ans", d_age_6:"65 ans ou plus",
     d2_label:"Niveau d'enseignement où vous travaillez",
     d2_infantil:"Maternelle", d2_primaria:"Primaire", d2_secundaria:"Secondaire", d2_bachillerato:"Lycée", d2_fp:"Formation professionnelle", d2_superior:"Enseignement supérieur", d2_otra:"Autre",
     d3_label:"Années d'expérience d'enseignement", d3_more:"Plus de 20",
@@ -2029,6 +2048,8 @@ const I18N = {
     b1_eyebrow:"Block 1 von 3", b1_title:"Wer Sie sind", b1_desc:"Ein paar schnelle Kontextfragen. Etwa 1 Minute.",
     select_placeholder:"Auswählen...", other_country:"Anderes EU-Land",
     d1_label:"Land, in dem Sie derzeit arbeiten",
+    d_age_label:"Ihre Altersgruppe",
+    d_age_1:"Unter 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 oder älter",
     d2_label:"Bildungsstufe, in der Sie arbeiten",
     d2_infantil:"Frühkindliche Bildung", d2_primaria:"Primarstufe", d2_secundaria:"Sekundarstufe", d2_bachillerato:"Oberstufe", d2_fp:"Berufsbildung", d2_superior:"Hochschulbildung", d2_otra:"Andere",
     d3_label:"Jahre Unterrichtserfahrung", d3_more:"Mehr als 20",
@@ -2101,6 +2122,8 @@ const I18N = {
     b1_eyebrow:"Blocco 1 di 3", b1_title:"Chi sei", b1_desc:"Alcune domande rapide di contesto. Circa 1 minuto.",
     select_placeholder:"Seleziona...", other_country:"Altro paese UE",
     d1_label:"Paese in cui lavori attualmente",
+    d_age_label:"La tua fascia d'età",
+    d_age_1:"Meno di 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 o più",
     d2_label:"Livello scolastico in cui lavori",
     d2_infantil:"Scuola dell'infanzia", d2_primaria:"Primaria", d2_secundaria:"Secondaria", d2_bachillerato:"Scuola secondaria superiore", d2_fp:"Formazione professionale", d2_superior:"Istruzione superiore", d2_otra:"Altro",
     d3_label:"Anni di esperienza di insegnamento", d3_more:"Più di 20",
@@ -2173,6 +2196,8 @@ const I18N = {
     b1_eyebrow:"Bloco 1 de 3", b1_title:"Quem é você", b1_desc:"Algumas perguntas rápidas de contexto. Cerca de 1 minuto.",
     select_placeholder:"Selecione...", other_country:"Outro país da UE",
     d1_label:"País onde trabalha atualmente",
+    d_age_label:"A sua faixa etária",
+    d_age_1:"Menos de 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 ou mais",
     d2_label:"Etapa educativa em que trabalha",
     d2_infantil:"Pré-escolar", d2_primaria:"Ensino primário", d2_secundaria:"Ensino secundário", d2_bachillerato:"Ensino secundário superior", d2_fp:"Formação profissional", d2_superior:"Ensino superior", d2_otra:"Outra",
     d3_label:"Anos de experiência docente", d3_more:"Mais de 20",
@@ -2245,6 +2270,8 @@ const I18N = {
     b1_eyebrow:"Blok 1 z 3", b1_title:"Kim jesteś", b1_desc:"Kilka szybkich pytań kontekstowych. Około 1 minuty.",
     select_placeholder:"Wybierz...", other_country:"Inny kraj UE",
     d1_label:"Kraj, w którym aktualnie pracujesz",
+    d_age_label:"Twoja grupa wiekowa",
+    d_age_1:"Poniżej 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 lub więcej",
     d2_label:"Etap edukacyjny, na którym pracujesz",
     d2_infantil:"Przedszkole", d2_primaria:"Szkoła podstawowa", d2_secundaria:"Szkoła średnia", d2_bachillerato:"Szkoła ponadpodstawowa", d2_fp:"Kształcenie zawodowe", d2_superior:"Szkolnictwo wyższe", d2_otra:"Inne",
     d3_label:"Lata doświadczenia w nauczaniu", d3_more:"Więcej niż 20",
@@ -2317,6 +2344,8 @@ const I18N = {
     b1_eyebrow:"Blok 1 van 3", b1_title:"Wie u bent", b1_desc:"Een paar snelle contextvragen. Ongeveer 1 minuut.",
     select_placeholder:"Selecteer...", other_country:"Ander EU-land",
     d1_label:"Land waarin u momenteel werkt",
+    d_age_label:"Uw leeftijdsgroep",
+    d_age_1:"Onder 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 of ouder",
     d2_label:"Onderwijsniveau waarin u werkt",
     d2_infantil:"Kleuteronderwijs", d2_primaria:"Basisonderwijs", d2_secundaria:"Voortgezet onderwijs", d2_bachillerato:"Hoger voortgezet onderwijs", d2_fp:"Beroepsonderwijs", d2_superior:"Hoger onderwijs", d2_otra:"Anders",
     d3_label:"Jaren onderwijservaring", d3_more:"Meer dan 20",
@@ -2955,6 +2984,13 @@ function showStep(step){
           const t = el.textContent.trim();
           if(t) parts.push(t);
         });
+        // Step 1: also read all demographic question labels (country, age, stage, etc.)
+        if(step === 1){
+          block.querySelectorAll('.q-label').forEach(lbl => {
+            const t = lbl.textContent.trim();
+            if(t) parts.push(t);
+          });
+        }
         speak(parts.join('. '), currentLang, btn);
       };
       head.appendChild(btn);
