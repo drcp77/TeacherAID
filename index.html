@@ -282,6 +282,38 @@
     </div>
 
     <div class="card">
+      <label class="q-label" data-i18n="d_gender_label">Género</label>
+      <select id="dGender">
+        <option value="" data-i18n="select_placeholder">Selecciona...</option>
+        <option data-i18n="d_gender_1">Mujer</option>
+        <option data-i18n="d_gender_2">Hombre</option>
+        <option data-i18n="d_gender_3">No binario</option>
+        <option data-i18n="d_gender_4">Prefiero no decirlo</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <label class="q-label" data-i18n="d_contract_label">Tipo de contrato laboral</label>
+      <select id="dContract">
+        <option value="" data-i18n="select_placeholder">Selecciona...</option>
+        <option data-i18n="d_contract_1">Permanente / funcionario</option>
+        <option data-i18n="d_contract_2">Temporal / interino</option>
+        <option data-i18n="d_contract_3">Otro</option>
+      </select>
+    </div>
+
+    <div class="card">
+      <label class="q-label" data-i18n="d_edu_label">Nivel educativo máximo alcanzado</label>
+      <select id="dEdu">
+        <option value="" data-i18n="select_placeholder">Selecciona...</option>
+        <option data-i18n="d_edu_1">Diplomatura / Grado</option>
+        <option data-i18n="d_edu_2">Máster</option>
+        <option data-i18n="d_edu_3">Doctorado</option>
+        <option data-i18n="d_edu_4">Otro</option>
+      </select>
+    </div>
+
+    <div class="card">
       <label class="q-label" data-i18n="d2_label">Etapa educativa en la que trabajas</label>
       <select id="d2">
         <option value="" data-i18n="select_placeholder">Selecciona...</option>
@@ -1828,6 +1860,12 @@ const I18N = {
     d1_label:"País en el que trabajas actualmente",
     d_age_label:"Tu rango de edad",
     d_age_1:"Menos de 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 o más",
+    d_gender_label:"Género",
+    d_gender_1:"Mujer", d_gender_2:"Hombre", d_gender_3:"No binario", d_gender_4:"Prefiero no decirlo",
+    d_contract_label:"Tipo de contrato laboral",
+    d_contract_1:"Permanente / funcionario", d_contract_2:"Temporal / interino", d_contract_3:"Otro",
+    d_edu_label:"Nivel educativo máximo alcanzado",
+    d_edu_1:"Diplomatura / Grado", d_edu_2:"Máster", d_edu_3:"Doctorado", d_edu_4:"Otro",
     d2_label:"Etapa educativa en la que trabajas",
     d2_infantil:"Infantil", d2_primaria:"Primaria", d2_secundaria:"Secundaria", d2_bachillerato:"Bachillerato", d2_fp:"Formación Profesional", d2_superior:"Educación Superior", d2_otra:"Otra",
     d3_label:"Años de experiencia docente", d3_more:"Más de 20",
@@ -1902,6 +1940,12 @@ const I18N = {
     d1_label:"Country where you currently work",
     d_age_label:"Your age range",
     d_age_1:"Under 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 or older",
+    d_gender_label:"Gender",
+    d_gender_1:"Woman", d_gender_2:"Man", d_gender_3:"Non-binary", d_gender_4:"Prefer not to say",
+    d_contract_label:"Employment contract type",
+    d_contract_1:"Permanent / tenured", d_contract_2:"Temporary / fixed-term", d_contract_3:"Other",
+    d_edu_label:"Highest level of education completed",
+    d_edu_1:"Bachelor's degree", d_edu_2:"Master's degree", d_edu_3:"Doctorate", d_edu_4:"Other",
     d2_label:"Educational stage where you work",
     d2_infantil:"Early childhood", d2_primaria:"Primary", d2_secundaria:"Secondary", d2_bachillerato:"Upper secondary", d2_fp:"Vocational training", d2_superior:"Higher education", d2_otra:"Other",
     d3_label:"Years of teaching experience", d3_more:"More than 20",
@@ -1976,6 +2020,12 @@ const I18N = {
     d1_label:"Pays où vous travaillez actuellement",
     d_age_label:"Votre tranche d'âge",
     d_age_1:"Moins de 25 ans", d_age_2:"25-34 ans", d_age_3:"35-44 ans", d_age_4:"45-54 ans", d_age_5:"55-64 ans", d_age_6:"65 ans ou plus",
+    d_gender_label:"Genre",
+    d_gender_1:"Femme", d_gender_2:"Homme", d_gender_3:"Non-binaire", d_gender_4:"Je préfère ne pas répondre",
+    d_contract_label:"Type de contrat de travail",
+    d_contract_1:"Permanent / titulaire", d_contract_2:"Temporaire / contractuel", d_contract_3:"Autre",
+    d_edu_label:"Niveau d'études le plus élevé atteint",
+    d_edu_1:"Licence", d_edu_2:"Master", d_edu_3:"Doctorat", d_edu_4:"Autre",
     d2_label:"Niveau d'enseignement où vous travaillez",
     d2_infantil:"Maternelle", d2_primaria:"Primaire", d2_secundaria:"Secondaire", d2_bachillerato:"Lycée", d2_fp:"Formation professionnelle", d2_superior:"Enseignement supérieur", d2_otra:"Autre",
     d3_label:"Années d'expérience d'enseignement", d3_more:"Plus de 20",
@@ -2050,6 +2100,12 @@ const I18N = {
     d1_label:"Land, in dem Sie derzeit arbeiten",
     d_age_label:"Ihre Altersgruppe",
     d_age_1:"Unter 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 oder älter",
+    d_gender_label:"Geschlecht",
+    d_gender_1:"Frau", d_gender_2:"Mann", d_gender_3:"Nicht-binär", d_gender_4:"Möchte ich nicht angeben",
+    d_contract_label:"Art des Arbeitsvertrags",
+    d_contract_1:"Unbefristet / verbeamtet", d_contract_2:"Befristet / Vertretung", d_contract_3:"Andere",
+    d_edu_label:"Höchster erreichter Bildungsabschluss",
+    d_edu_1:"Bachelor", d_edu_2:"Master", d_edu_3:"Promotion", d_edu_4:"Andere",
     d2_label:"Bildungsstufe, in der Sie arbeiten",
     d2_infantil:"Frühkindliche Bildung", d2_primaria:"Primarstufe", d2_secundaria:"Sekundarstufe", d2_bachillerato:"Oberstufe", d2_fp:"Berufsbildung", d2_superior:"Hochschulbildung", d2_otra:"Andere",
     d3_label:"Jahre Unterrichtserfahrung", d3_more:"Mehr als 20",
@@ -2124,6 +2180,12 @@ const I18N = {
     d1_label:"Paese in cui lavori attualmente",
     d_age_label:"La tua fascia d'età",
     d_age_1:"Meno di 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 o più",
+    d_gender_label:"Genere",
+    d_gender_1:"Donna", d_gender_2:"Uomo", d_gender_3:"Non binario", d_gender_4:"Preferisco non dirlo",
+    d_contract_label:"Tipo di contratto di lavoro",
+    d_contract_1:"Permanente / di ruolo", d_contract_2:"Temporaneo / a tempo determinato", d_contract_3:"Altro",
+    d_edu_label:"Livello di istruzione più alto raggiunto",
+    d_edu_1:"Laurea", d_edu_2:"Laurea magistrale", d_edu_3:"Dottorato", d_edu_4:"Altro",
     d2_label:"Livello scolastico in cui lavori",
     d2_infantil:"Scuola dell'infanzia", d2_primaria:"Primaria", d2_secundaria:"Secondaria", d2_bachillerato:"Scuola secondaria superiore", d2_fp:"Formazione professionale", d2_superior:"Istruzione superiore", d2_otra:"Altro",
     d3_label:"Anni di esperienza di insegnamento", d3_more:"Più di 20",
@@ -2198,6 +2260,12 @@ const I18N = {
     d1_label:"País onde trabalha atualmente",
     d_age_label:"A sua faixa etária",
     d_age_1:"Menos de 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 ou mais",
+    d_gender_label:"Género",
+    d_gender_1:"Mulher", d_gender_2:"Homem", d_gender_3:"Não binário", d_gender_4:"Prefiro não dizer",
+    d_contract_label:"Tipo de vínculo laboral",
+    d_contract_1:"Permanente / efetivo", d_contract_2:"Temporário / contratado", d_contract_3:"Outro",
+    d_edu_label:"Nível de escolaridade mais elevado concluído",
+    d_edu_1:"Licenciatura", d_edu_2:"Mestrado", d_edu_3:"Doutoramento", d_edu_4:"Outro",
     d2_label:"Etapa educativa em que trabalha",
     d2_infantil:"Pré-escolar", d2_primaria:"Ensino primário", d2_secundaria:"Ensino secundário", d2_bachillerato:"Ensino secundário superior", d2_fp:"Formação profissional", d2_superior:"Ensino superior", d2_otra:"Outra",
     d3_label:"Anos de experiência docente", d3_more:"Mais de 20",
@@ -2272,6 +2340,12 @@ const I18N = {
     d1_label:"Kraj, w którym aktualnie pracujesz",
     d_age_label:"Twoja grupa wiekowa",
     d_age_1:"Poniżej 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 lub więcej",
+    d_gender_label:"Płeć",
+    d_gender_1:"Kobieta", d_gender_2:"Mężczyzna", d_gender_3:"Niebinarna", d_gender_4:"Nie chcę podawać",
+    d_contract_label:"Rodzaj umowy o pracę",
+    d_contract_1:"Na czas nieokreślony / mianowanie", d_contract_2:"Tymczasowa / na zastępstwo", d_contract_3:"Inna",
+    d_edu_label:"Najwyższy ukończony poziom wykształcenia",
+    d_edu_1:"Licencjat / studia I stopnia", d_edu_2:"Magister", d_edu_3:"Doktorat", d_edu_4:"Inny",
     d2_label:"Etap edukacyjny, na którym pracujesz",
     d2_infantil:"Przedszkole", d2_primaria:"Szkoła podstawowa", d2_secundaria:"Szkoła średnia", d2_bachillerato:"Szkoła ponadpodstawowa", d2_fp:"Kształcenie zawodowe", d2_superior:"Szkolnictwo wyższe", d2_otra:"Inne",
     d3_label:"Lata doświadczenia w nauczaniu", d3_more:"Więcej niż 20",
@@ -2346,6 +2420,12 @@ const I18N = {
     d1_label:"Land waarin u momenteel werkt",
     d_age_label:"Uw leeftijdsgroep",
     d_age_1:"Onder 25", d_age_2:"25-34", d_age_3:"35-44", d_age_4:"45-54", d_age_5:"55-64", d_age_6:"65 of ouder",
+    d_gender_label:"Geslacht",
+    d_gender_1:"Vrouw", d_gender_2:"Man", d_gender_3:"Non-binair", d_gender_4:"Zeg ik liever niet",
+    d_contract_label:"Type arbeidscontract",
+    d_contract_1:"Vast / ambtenaar", d_contract_2:"Tijdelijk / vervanging", d_contract_3:"Anders",
+    d_edu_label:"Hoogst behaalde opleidingsniveau",
+    d_edu_1:"Bachelor", d_edu_2:"Master", d_edu_3:"Doctoraat", d_edu_4:"Anders",
     d2_label:"Onderwijsniveau waarin u werkt",
     d2_infantil:"Kleuteronderwijs", d2_primaria:"Basisonderwijs", d2_secundaria:"Voortgezet onderwijs", d2_bachillerato:"Hoger voortgezet onderwijs", d2_fp:"Beroepsonderwijs", d2_superior:"Hoger onderwijs", d2_otra:"Anders",
     d3_label:"Jaren onderwijservaring", d3_more:"Meer dan 20",
